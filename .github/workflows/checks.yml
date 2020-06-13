@@ -8,14 +8,12 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - name: "logging"
-        run: |
-          echo ${{ toJson(github) }}
       - uses: actions/github-script@0.9.0
         id: comment
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            console.log(context.payload.issue.pull_request)
             return (
               context.payload.issue.pull_request &&
               context.payload.comment.body === '/check'
