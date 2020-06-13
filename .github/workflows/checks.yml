@@ -8,6 +8,8 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{ toJson(context) }}
+      - run: echo ${{ toJson(github) }}
       - uses: actions/github-script@0.9.0
         id: comment
         with:
@@ -24,18 +26,18 @@ jobs:
         with:
           node-version: "12.x"
 
-      - name: Fail for non-GitHub Bot PRs
+      - name: Comment for non-GitHub Bot PRs
         if: steps.comment.outputs.result == 'true' && github.actor != 'github-actions'
-        uses: thollander/actions-comment-pull-request@master
+        uses: actions/github-script@0.9.0
         with:
-          message: |
-            Thank you for contribution!
-            Seems like you trying to change specification not in a right place :thinking:
-            This repository contains code for website [semver.org](https://semver.org) with spec translations. If you looking for direct changes to SemVer, please use [semver/semver](https://github.com/semver/semver) repository.
-            
-            Please close this PR and create a new one to the right repository. If you have any questions, feel free to ping someone from @semver/maintainers
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Thank you for contribution!\nSeems like you trying to change specification not in a right place :thinking:\nThis repository contains code for website [semver.org](https://semver.org) with spec translations. If you looking for direct changes to SemVer, please use [semver/semver](https://github.com/semver/semver) repository.\n\nPlease close this PR and create a new one to the right repository. If you have any questions, feel free to ping someone from @semver/maintainers'
+            });
       - uses: actions/cache@v1
         if: steps.comment.outputs.result == 'true'
         with:
