@@ -26,21 +26,24 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const { data: diff } = await github.pulls.get({
+            const { data: { merge_commit_sha } } = await github.pulls.get({
               pull_number: context.issue.number,
               owner: context.repo.owner,
-              repo: context.repo.repo,
-              mediaType: {
-                format: "diff",
-              },
+              repo: context.repo.repo
             });
-            console.log(diff.head, diff.base);
-            github.issues.createComment({
-              issue_number: context.issue.number,
+            const { files } = octokit.git.getCommit({
+              commit_sha: merge_commit_sha,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Thank you for contribution!\nSeems like you trying to change specification not in a right place :thinking:\nThis repository contains code for website [semver.org](https://semver.org) with spec translations. If you looking for direct changes to SemVer, please use [semver/semver](https://github.com/semver/semver) repository.\n\nPlease close this PR and create a new one to the right repository. If you have any questions, feel free to ping someone from @semver/maintainers'
             });
+            if (files.some(({ filename }) => /^spec\//.test(filename))) {
+              github.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: 'Thank you for contribution!\nSeems like you trying to change specification not in a right place :thinking:\nThis repository contains code for website [semver.org](https://semver.org) with spec translations. If you looking for direct changes to SemVer, please use [semver/semver](https://github.com/semver/semver) repository.\n\nPlease close this PR and create a new one to the right repository. If you have any questions, feel free to ping someone from @semver/maintainers'
+              });
+            }
       - uses: actions/setup-node@v1
         if: steps.comment.outputs.result == 'true'
         with:
