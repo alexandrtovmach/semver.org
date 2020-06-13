@@ -21,11 +21,17 @@ jobs:
           git fetch origin +refs/pull/${{ github.event.issue.number }}/merge
           git checkout FETCH_HEAD
       - name: Set diff
-        id: diff
+        id: gitDiff
         if: steps.comment.outputs.result == 'true'
         run: echo "::set-output name=diffList::$(git diff --name-only)"
+      - uses: actions/github-script@0.9.0
+        if: steps.comment.outputs.result == 'true'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            console.log(steps.gitDiff.outputs);
       - name: Comment for non-GitHub Bot PRs
-        if: steps.comment.outputs.result == 'true' && github.actor != 'github-actions' && contains(steps.diff.outputs.diffList, 'spec/')
+        if: steps.comment.outputs.result == 'true' && github.actor != 'github-actions' && contains(steps.gitDiff.outputs.diffList, 'spec/')
         uses: actions/github-script@0.9.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
