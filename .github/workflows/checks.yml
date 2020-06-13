@@ -26,7 +26,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const diff = await github.pulls.get({
+            const { data: diff } = await github.pulls.get({
               pull_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -34,7 +34,7 @@ jobs:
                 format: "diff",
               },
             });
-            console.log(diff);
+            console.log(diff.head, diff.base);
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
