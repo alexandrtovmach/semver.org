@@ -24,7 +24,7 @@ jobs:
         if: steps.comment.outputs.result == 'true'
         run: echo "::set-output name=DIFF::{ git diff --name-only }"
       - name: Comment for non-GitHub Bot PRs
-        if: steps.comment.outputs.result == 'true' && github.actor != 'github-actions' && contains($DIFF, 'spec/')
+        if: steps.comment.outputs.result == 'true' && github.actor != 'github-actions' && contains({$DIFF}, 'spec/')
         uses: actions/github-script@0.9.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
