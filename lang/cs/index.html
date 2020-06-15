@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="cs" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sémantické verzování 2.0.0 | Semantic Versioning</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Sémantické verzování 2.0.0" />
+<meta name="author" content="Jakub Křižka" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semantic Versioning spec and website" />
+<meta property="og:description" content="Semantic Versioning spec and website" />
+<link rel="canonical" href="http://0.0.0.0:4000/lang/cs/" />
+<meta property="og:url" content="http://0.0.0.0:4000/lang/cs/" />
+<meta property="og:site_name" content="Semantic Versioning" />
+<script type="application/ld+json">
+{"description":"Semantic Versioning spec and website","@type":"WebPage","headline":"Sémantické verzování 2.0.0","url":"http://0.0.0.0:4000/lang/cs/","author":{"@type":"Person","name":"Jakub Křižka"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <ol class="nav lang" dir="ltr">
+      
+      
+        <li class="language language-ar">
+          <a rel="alternate" lang="ar" hreflang="ar"
+            href="/lang/ar"
+            >العربية (ar)</a>
+        </li>
+      
+        <li class="language language-ca">
+          <a rel="alternate" lang="ca" hreflang="ca"
+            href="/lang/ca"
+            >català (ca)</a>
+        </li>
+      
+        <li class="language language-cs">
+          <a rel="alternate" lang="cs" hreflang="cs"
+            href="/lang/cs"
+            >česky (cs)</a>
+        </li>
+      
+        <li class="language language-de">
+          <a rel="alternate" lang="de" hreflang="de"
+            href="/lang/de"
+            >deutsch (de)</a>
+        </li>
+      
+        <li class="language language-en">
+          <a rel="alternate" lang="en" hreflang="en"
+            href="/lang/en"
+            >english (en)</a>
+        </li>
+      
+        <li class="language language-es">
+          <a rel="alternate" lang="es" hreflang="es"
+            href="/lang/es"
+            >español (es)</a>
+        </li>
+      
+        <li class="language language-fa">
+          <a rel="alternate" lang="fa" hreflang="fa"
+            href="/lang/fa"
+            >فارسی (fa)</a>
+        </li>
+      
+        <li class="language language-fr">
+          <a rel="alternate" lang="fr" hreflang="fr"
+            href="/lang/fr"
+            >français (fr)</a>
+        </li>
+      
+        <li class="language language-he">
+          <a rel="alternate" lang="he" hreflang="he"
+            href="/lang/he"
+            >עברית (he)</a>
+        </li>
+      
+        <li class="language language-hin">
+          <a rel="alternate" lang="hin" hreflang="hin"
+            href="/lang/hin"
+            >हिन्दी (hin)</a>
+        </li>
+      
+        <li class="language language-hr">
+          <a rel="alternate" lang="hr" hreflang="hr"
+            href="/lang/hr"
+            >hrvatski (hr)</a>
+        </li>
+      
+        <li class="language language-hu">
+          <a rel="alternate" lang="hu" hreflang="hu"
+            href="/lang/hu"
+            >magyar (hu)</a>
+        </li>
+      
+        <li class="language language-hy">
+          <a rel="alternate" lang="hy" hreflang="hy"
+            href="/lang/hy"
+            >Հայերեն (hy)</a>
+        </li>
+      
+        <li class="language language-id">
+          <a rel="alternate" lang="id" hreflang="id"
+            href="/lang/id"
+            >indonesia (id)</a>
+        </li>
+      
+        <li class="language language-it">
+          <a rel="alternate" lang="it" hreflang="it"
+            href="/lang/it"
+            >italiano (it)</a>
+        </li>
+      
+        <li class="language language-ja">
+          <a rel="alternate" lang="ja" hreflang="ja"
+            href="/lang/ja"
+            >日本語 (ja)</a>
+        </li>
+      
+        <li class="language language-ka">
+          <a rel="alternate" lang="ka" hreflang="ka"
+            href="/lang/ka"
+            >ქართული (ka)</a>
+        </li>
+      
+        <li class="language language-kab">
+          <a rel="alternate" lang="kab" hreflang="kab"
+            href="/lang/kab"
+            >taqbaylit (kab)</a>
+        </li>
+      
+        <li class="language language-ko">
+          <a rel="alternate" lang="ko" hreflang="ko"
+            href="/lang/ko"
+            >한국어 (ko)</a>
+        </li>
+      
+        <li class="language language-pl">
+          <a rel="alternate" lang="pl" hreflang="pl"
+            href="/lang/pl"
+            >polski (pl)</a>
+        </li>
+      
+        <li class="language language-pt-BR">
+          <a rel="alternate" lang="pt-BR" hreflang="pt-BR"
+            href="/lang/pt-BR"
+            >português brasileiro (pt-BR)</a>
+        </li>
+      
+        <li class="language language-ru">
+          <a rel="alternate" lang="ru" hreflang="ru"
+            href="/lang/ru"
+            >pyccкий (ru)</a>
+        </li>
+      
+        <li class="language language-sk">
+          <a rel="alternate" lang="sk" hreflang="sk"
+            href="/lang/sk"
+            >slovensky (sk)</a>
+        </li>
+      
+        <li class="language language-sl">
+          <a rel="alternate" lang="sl" hreflang="sl"
+            href="/lang/sl"
+            >slovenščina (sl)</a>
+        </li>
+      
+        <li class="language language-sv">
+          <a rel="alternate" lang="sv" hreflang="sv"
+            href="/lang/sv"
+            >svenska (sv)</a>
+        </li>
+      
+        <li class="language language-tr">
+          <a rel="alternate" lang="tr" hreflang="tr"
+            href="/lang/tr"
+            >Türkçe (tr)</a>
+        </li>
+      
+        <li class="language language-uk">
+          <a rel="alternate" lang="uk" hreflang="uk"
+            href="/lang/uk"
+            >українська (uk)</a>
+        </li>
+      
+        <li class="language language-zh-CN">
+          <a rel="alternate" lang="zh-CN" hreflang="zh-CN"
+            href="/lang/zh-CN"
+            >简体中文 (zh-CN)</a>
+        </li>
+      
+        <li class="language language-zh-TW">
+          <a rel="alternate" lang="zh-TW" hreflang="zh-TW"
+            href="/lang/zh-TW"
+            >繁體中文 (zh-TW)</a>
+        </li>
+      
+    </ol>
+    <ol class="nav">
+      
+      
+        
+        
+        
+          <li class="version version-2.0.0">
+            <a href="/lang/cs/spec/v2.0.0.html">2.0.0</a>
+          </li>
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+    </ol>
+    <div id="spec">
+     <h1 id="sémantické-verzování-200">Sémantické verzování 2.0.0</h1>
+
+<h2 id="shrnutí">Shrnutí</h2>
+
+<p>Číslo verzí zapisujeme ve formátu MAJOR.MINOR.PATCH
+Navyšování jednotlivých čísel verzí probíhá následovně:</p>
+
+<ol>
+  <li>MAJOR - když nastala změna, která není zpětně kompatibilní s ostatními (API)</li>
+  <li>MINOR - když se přidá funkcionalita se zachováním zpětné kompatibility</li>
+  <li>PATCH - když se opravila chyba a zůstala kompatibilita</li>
+</ol>
+
+<p>Pomocí předběžných verzí a přidáváním metadat je možné upřesnit informace. Např.: <code class="language-plaintext highlighter-rouge">1.0.0-alfa</code>, <code class="language-plaintext highlighter-rouge">1.0.1-beta+2</code></p>
+
+<h2 id="úvod">Úvod</h2>
+
+<p>Ve světě softwaru, jeho vývoje a správy existuje děsivé místo, kterému anglicky říkáme “dependency hell” (v překladu “peklo závislostí”). Čím větší a komplexnější váš projekt je, tím je větší šance, že se na tomto místě jednou ocitnete.</p>
+
+<p>Když mají systémy mnoho závislostí, může se stát, že vydání nové verze je noční můrou pro obě strany. Pokud je specifikovaná závislost příliš striktní, hrozí, že zůstanete na jedné verzi (angl. “version lock”) a nebudete mít možnost přejít na další verzi bez toho, abyste vydali další verze všech balíčků nebo knihoven, na kterých projekt stojí. Na druhou stranu, když je specifikovaná závislost příliš volná, přijdete na to, že váš program je kompatibilní s více verzemi než je nutné a potřebné. V pekle závislostí se nacházíte, jakmile jste vázaný určitou verzí nebo v případně, že není přesně specifikován rozsah verzí, které máte použít. Taková situace brání v bezpečném vývoji kupředu.</p>
+
+<p>Řešením tohoto problému je jednoduchý sled pravidel, které určují, jak budou čísla verzí přiřazována a navyšována. Tato pravidla jsou založena (ale nikoliv omezena) na již ověřené praxi a to ve vývoji otevřeného i uzavřeného softwaru. Pro správné fungování systému, si musíte nejdříve nadefinovat způsob, jakým se bude komunikovat s Vaší aplikací (dále API). Toto API může být nadefinováno pomocí rozsáhlé dokumentace nebo zapsáno přímo ve zdrojovém kódu. Nezáleží na způsobu zápisu, je důležité, aby bylo srozumitelné a snadno čitelné. Je třeba mít kompletní dokumentaci, způsob oznamovaní a čitelné rozdíly v nových verzích. Zápis verzí je ve formátu MAJOR.MINOR.PATCH. Opravy chyb, které nezměnily Vaše API, zvyšují číslo PATCH verze. Zpětně kompatibilní změny v API zvyšují hodnotu MINOR verze a rozdílné verze API, které nejsou zpětně kompatibilní, zvyšují číslo MAJOR verze.</p>
+
+<p>Tímto způsobem je nastavený systém Sémantického verzování.</p>
+
+<h2 id="specifikace-sémantického-verzování-semver">Specifikace Sémantického verzování (SemVer)</h2>
+
+<p>“MUSÍ” (angl. MUST, REQUIRED, SHALL)
+“NESMÍ” (angl. MUST NOT, SHALL NOT)
+“MĚLO BY” (angl. SHOULD, RECOMMENDED)
+“NEMĚLO BY” (angl. SHOULD NOT)
+“MŮŽE” (angl. MAY, OPTIONAL)
+(výrazy jsou interpretované z dokumentu: <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a>)</p>
+
+<ol>
+  <li>
+    <p>Software používající Sémantické verzování, MUSÍ mít nadefinované API, buďto přímo ve zdrojovém kódu a nebo v externí dokumentaci. V obou případech to musí být hlavně přesné a komplexní.</p>
+  </li>
+  <li>
+    <p>Číslo verzí MUSÍ být ve formátu X, Y, Z. Jedná se o celá nezáporná čísla, přičemž X se NESMÍ rovnat hodnotě nula. Může se rovnat nule jen v případě, kdy se jedná o počáteční vývoj. X je číslo MAJOR verze, Y je číslem MINOR verze a Z je číslem PATCH verze, přičemž každé číslo má svoji hodnotu a navyšují se zvlášť a standardně, např.1.9.0 =&gt; 1.10.0 =&gt; 1.11.0.</p>
+  </li>
+  <li>
+    <p>Jakmile se vydá očíslovaná verze programu, NESMÍ se měnit a každá další úprava nebo oprava je vydána pod novou verzí.</p>
+  </li>
+  <li>
+    <p>MAJOR verze s hodnotou 0 (0.y.z.) je určena pro počáteční vývoj. Cokoliv se může změnit a API v tomto formátu by NEMĚLO být považováno za stabilní.</p>
+  </li>
+  <li>
+    <p>Verze 1.0.0 definuje veřejně vydané API. Způsob, jakým se dále navyšuje číslo verze je ovlivněné tímto API a jeho změnami.</p>
+  </li>
+  <li>
+    <p>Číslo PATCH (Z) MUSÍ být navýšené jenom pokud byly implentované zpětně kompatibilní opravy chyb. Oprava chyb je definována jako interní změna opravující nežádoucí chování programu.</p>
+  </li>
+  <li>
+    <p>Číslo MINOR (Y) MUSÍ být zvýšené, když byla do API přidána nová, zpětně kompatibilní funkcionalita nebo pokud byla jakákoliv funkcionalita odebrána (jako zastaralá) i pokud neovlivňuje samotný API kód. MŮŽE zahrnout i změnu PATCH verze. Číslo PATCH verze se musí vynulovat vždy, když se změní MINOR verze.</p>
+  </li>
+  <li>
+    <p>Číslo MAJOR (X) MUSÍ být zvýšené, když byly přidané změny, které způsobily zpětnou nekompatibilitu. MŮŽE zahrnout i změny v rámci MINOR a PATCH verze. Číslo MINOR i PATCH se MUSÍ vynulovat vždy, když se změní MAJOR verze.</p>
+  </li>
+  <li>
+    <p>Předběžné verze (angl. pre-release) MOHOU být označeny přidáním pomlčky a sérií identifikátorů oddělených tečkou hned za číslo PATCH verze. Identifikátory MUSÍ obsahovat pouze ASCII alfanumerické znaky a pomlčku [0-9A-Za-z-], NESMÍ být prázdné a číselné identifikátory NESMÍ obsahovat úvodní nulu. Předběžné verze mají nižší prioritu jako související normální verze. Předběžná verze je nestabilní a nemusí splňovat požadavky a závislosti jako normální verze. Např.: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.</p>
+  </li>
+  <li>
+    <p>Metadata MOHOU být označené ve verzi přidáním znaku plus (+) a sérií identifikátorů oddělených tečkou hned za číslo PATCH a nebo pomocí předběžné verze. Identifikátory MUSÍ obsahovat pouze ASCII alfanumerické znaky a pomlčku [0-9A-Za-z-], NESMÍ být prázdné a číselné identifikátory NESMÍ obsahovat úvodní nulu. Metadata by NEMĚLA hrát roli při volbě priority verze. Např.: verze 1.0.0-alpha+001, 1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85 mají všechny stejnou prioritu.</p>
+  </li>
+  <li>
+    <p>Priorita se vztahuje na to, jak se verze vzájemně porovnávají. Priorita MUSÍ být určována rozdělením verze na MAJOR, MINOR, PATCH a identifikátory předběžných verzí - přesně v tomto pořadí (s metadaty se nepočítá). Priorita je daná prvním rozdílem při porovnání zleva doprava přičemž čísla MAJOR, MINOR a PATCH jsou vždy porovnávána jako čísla. Např.: 1.0.0 &lt; 2.0.0 &lt; 2.1.0 &lt; 2.1.1. Pokud jsou čísla MAJOR, MINOR a PATCH stejná, předběžná verze má menší prioritu, než normální. Např.: 1.0.0-alpha &lt; 1.0.0. Priorita pro dvě předběžné verze, které se shodují v číslech MAJOR, MINOR a PATCH musí být počítána zleva doprava od tečky oddělených identifikátorů a to do doby, dokud se nenajde rozdíl a to následujícím způsobem: (1) Identifikátory obsahující pouze číslice, jsou porovnané číselně a identifikátory s písmeny nebo pomlčkami jsou porovnávané lexikálně, zařazené podle ASCII. (2) Číselné identifikátory mají vždy nižší prioritu jak nečíslené. (3) Jsou-li všechny předchozí identifikátory v předběžné verzi stejné, tak větší množství identifikátorů značí vyšší prioritu, než s menším počtem. Např.: 1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0-rc.1 &lt; 1.0.0.</p>
+  </li>
+</ol>
+
+<h2 id="proč-používat-sémantické-verzování">Proč používat Sémantické verzování?</h2>
+
+<p>Sémantické verzování není revoluční myšlenka a když vydáváte software, tak už pravděpodobně děláte něco podobného. Problém je, že “něco podobného” nestačí. Bez dodržování daných formálních specifikací jsou čísla pro managment závislostí v podstatě na nic. Tím, že výše uvedeným myšlenkám dáváme přesnou a jasnou definici, je lehčí komunikovat záměry Vašeho softwaru jeho uživatelům. Jakmile jsou záměry jasné a flexibilní (ale ne příliš), specifikace závislostí může začít.</p>
+
+<p>Následující příklad ilustruje, jak se díky Sémantickému verzování můžete snadno vyhnout problémům se závislostmi (tzv. “dependency hell”). Mějme knihovnou “Firetruck” (česky požární vůz). Ta závisí na Sémanticky verzované knihovně “Ladder” (česky žebřík). Ve době vzniku knihovny Firetruck je aktuální verze knihovny Ladder 3.1.0. Protože Firetruck využívá některé funkce knihovny Ladder, které do ni byly přidány až ve verzi 3.1.0, můžete bez rizika nadefinovat závislost na knihovně Ladder ve verzi vyšší nebo rovno 3.1.0 a menší než 4.0.0. Jakmile bude vydána verze Ladder 3.2.0, můžete se spolehnout na to, že s ní bude knihovna Firetruck kompatibilní.</p>
+
+<p>Jako zodpovědní vývojáři určitě budete chtít kontrolovat, že všechno funguje podle Vašich předpokladů. Sématické verzování vám umožní rozumný způsob, jak vydávat a aktualizovat knihovny tak, abyste nemuseli řešit nové verze závislostí, ušetřili si čas a vyhnuli se zmatkům.</p>
+
+<p>Pokud vám tyto argumenty připadají rozumné, všechno co potřebujete udělat pro začátek používání Sémantického verzování, je dát vědět, že to děláte, a následně dodržovali stanovená pravidla. Odkazem ze souboru README z vaší aplikace/softwaru na tyto stránky dejte ostatním vědět, jaká pravidla používáte. Přinese to užitek vám i uživatelům vašeho software nebo aplikace.</p>
+
+<h2 id="často-kladené-otázky-faq">Často kladené otázky (FAQ)</h2>
+
+<h3 id="jak-si-poradit-s-verzemi-0yz-na-začátku-vývoje">Jak si poradit s verzemi 0.y.z. na začátku vývoje?</h3>
+
+<p>Nejjednodušším způsobem je začít vývoj na verzi 0.1.0. a potom zvyšovat MINOR verzi při každém dalším vydání softwaru.</p>
+
+<h3 id="jak-poznat-kdy-vydat-verzi-100">Jak poznat, kdy vydat verzi 1.0.0?</h3>
+
+<p>Pokud se váš software již používá v produkci, už by pravděpodobně měl mít verzi 1.0.0. Jestli máte stabilní API, které už uživatelé mají mezi svými závislostmi, měli byste mít už verzi 1.0.0. Taktéž, když se obáváte o zpětnou kompatibilitu.</p>
+
+<h3 id="neodrazuje-to-od-rychlého-vývoje">Neodrazuje to od rychlého vývoje?</h3>
+
+<p>MAJOR verze nula je o rychlém vývoji. Když každý den měníte API, stále byste měli být někde ve fázi 0.y.z nebo na separátní vývojové větvi, kde se připravuje následující MAJOR verze.</p>
+
+<h3 id="pokud-ty-nejmenší-zpětně-nekompatibilní-změny-v-api-znamenají-navýšení-major-verze-neskončíme-poměrně-rychle-někde-ve-verzi-4200">Pokud ty nejmenší zpětně nekompatibilní změny v API znamenají navýšení MAJOR verze, neskončíme poměrně rychle někde ve verzi 42.0.0?</h3>
+
+<p>To je otázka zodpovědného vývoje a prognóz. Nekompatibilní změny by neměly být v softwaru, který má mnoho závislostí, zavedeny jen tak. Náklady vynaložené na aktualizaci mohou být dost vysoké. To, že musíte vydat novou verzi MAJOR znamená, že jste si dobře promysleli dopad všech změn, výhody i následky.</p>
+
+<h3 id="zdokumentovat-celé-api-je-strašně-moc-práce">Zdokumentovat celé API je strašně moc práce!</h3>
+
+<p>Je Vaší zodpovědností jako profesionálních vývojářů správně dokumentovat software, který je určený i pro ostatní. Spravování složitosti softwaru je velmi důležitá část, pokud chcete váš projekt udržovat efektivní. A to nebude možné, když nikdo nebude vědět, jak váš software používat nebo které metody je bezpečné volat. Z dlouhodobého hlediska se Sématické verzování a důraz na dobře definované API ukázaly jako správná volba, umožňující hladké i dlouhodobé fungování.</p>
+
+<h3 id="co-dělat-když-vydám-zpětně-nekompatibilní-verzi-minor">Co dělat, když vydám zpětně nekompatibilní verzi MINOR?</h3>
+
+<p>Jakmile zjistíte, že jste porušili pravidla Sémantického verzování, opravte problém a vydejte další MINOR verzi, která opět vrátí zpětnou kompatibilitu. I vzhledem na vzniklou situaci je nepřípustné, abyste měnili už vydanou verzi. Pokud je to možné a vhodné, informujte uživatele o špatné verzi, aby věděli, že se jedná o chybu a dané verzi se vyhnuli.</p>
+
+<h3 id="co-dělat-když-jsem-aktualizoval-vlastní-závislosti-bez-toho-aby-se-změnilo-api">Co dělat, když jsem aktualizoval vlastní závislosti bez toho, aby se změnilo API?</h3>
+
+<p>Můžeme to považovat za kompatibilní, když to nijak neovlivnilo API. Software, který přesně závisí na balíčcích jako váš, by měl mít vlastní definici závislostí a jeho autor si všimne jakýchkoliv konfliktů. Rozhodnutí, zda se jedná o MINOR nebo PATCH závisí od toho, jestli jste upravili své závislosti kvůli nějaké chybě nebo proto, že jste přidali novou funkcionalitu. Pokud se jedná o druhý případ, očekává se, že přibude i nějaký kód a tím pádem se jedná o zvýšení MINOR verze.</p>
+
+<h3 id="co-když-jsem-nechtěně-změnil-api-způsobem-který-není-v-souladě-se-změnou-čísla-verze-například-jsem-udělal-major-změnu-v-patch-verzi">Co když jsem nechtěně změnil API, způsobem, který není v souladě se změnou čísla verze (například jsem udělal MAJOR změnu v PATCH verzi)</h3>
+
+<p>Posuďte, co je nejlepší. Jestli máte velkou skupinu uživatelů, která by byla ovlivněna změnou zpět, tak asi bude nejlepší vydat MAJOR verzi i na úkor toho, že oprava zpět by měla být součástí PATCH verze. Pamatujte, že Sémantické verzování je o tom, jak se verze mění. Jestli jsou změny pro Vaše uživatele důležité, použijte také číslo verze, abyste je informovali.</p>
+
+<h3 id="jak-se-vypořádat-se-zastaralými-funkcionalitami">Jak se vypořádat se zastaralými funkcionalitami?</h3>
+
+<p>Označení funkcionality jako zastaralé je standardní část softwarového vývoje a většinou je to potřeba k tomu, aby šel vývoj kupředu. Když zestárne část API, měli by jste udělat dvě věci: (1) upravit dokumentaci, aby uživatelé věděli o změně, (2) vydat další MINOR verzi, která funkcionalitu “zestárne”. Předtím, než funkcionalitu kompletně odstraníte v další MAJOR verzi, měli byste vytvořit alespoň jednu MINOR verzi, která obsahuje “zestárnutí”. To umožní uživatelům hladký a snadný přechod nebo převod na nové API.</p>
+
+<h3 id="má-sémantické-verzování-nějaký-limit-délky-označení-verzí">Má Sémantické verzování nějaký limit délky označení verzí?</h3>
+
+<p>Ne, nemá. Limit je 255 ASCII znaků, ale na to při běžném použití verzování nenarazíte.</p>
+
+<h2 id="o-specifikaci">O specifikaci</h2>
+
+<p>Autorem Specifikace sémantického verzování je
+<a href="http://tom.preston-werner.com">Tom Preston-Werner</a>, autor projektu Gravatar a spolu-zakladatel projektu Github.</p>
+
+<p>Pokud chcete zanechat zpětnou vazbu, prosím
+<a href="https://github.com/mojombo/semver/issues">přes GitHub</a>.</p>
+
+<h3 id="český-překlad">Český překlad</h3>
+
+<p><a href="https://github.com/jakubkrizka">Jakub Křižka</a> (autor),
+<a href="https://www.facebook.com/suzanna.bertova">Zuzana Bertová</a> (korektor)
+<a href="https://www.facebook.com/ales.parizek.1">Aleš Pařízek</a> (korektor)
+<a href="http://baraja.cz">Jan Barášek</a> (korektor)</p>
+
+<h2 id="licence">Licence</h2>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons - CC BY 3.0</a></p>
+
+    </div>
+    <script src="/js/anchorli.js"></script>
+  </body>
+</html>

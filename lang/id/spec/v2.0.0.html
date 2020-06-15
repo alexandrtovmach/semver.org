@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Versi Semantik 2.0.0 | Semantic Versioning</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Versi Semantik 2.0.0" />
+<meta name="author" content="Aditya Purwa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semantic Versioning spec and website" />
+<meta property="og:description" content="Semantic Versioning spec and website" />
+<link rel="canonical" href="http://0.0.0.0:4000/lang/id/spec/v2.0.0.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/lang/id/spec/v2.0.0.html" />
+<meta property="og:site_name" content="Semantic Versioning" />
+<script type="application/ld+json">
+{"description":"Semantic Versioning spec and website","@type":"WebPage","headline":"Versi Semantik 2.0.0","url":"http://0.0.0.0:4000/lang/id/spec/v2.0.0.html","author":{"@type":"Person","name":"Aditya Purwa"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <ol class="nav lang" dir="ltr">
+      
+      
+        <li class="language language-ar">
+          <a rel="alternate" lang="ar" hreflang="ar"
+            href="/lang/ar"
+            >العربية (ar)</a>
+        </li>
+      
+        <li class="language language-ca">
+          <a rel="alternate" lang="ca" hreflang="ca"
+            href="/lang/ca"
+            >català (ca)</a>
+        </li>
+      
+        <li class="language language-cs">
+          <a rel="alternate" lang="cs" hreflang="cs"
+            href="/lang/cs"
+            >česky (cs)</a>
+        </li>
+      
+        <li class="language language-de">
+          <a rel="alternate" lang="de" hreflang="de"
+            href="/lang/de"
+            >deutsch (de)</a>
+        </li>
+      
+        <li class="language language-en">
+          <a rel="alternate" lang="en" hreflang="en"
+            href="/lang/en"
+            >english (en)</a>
+        </li>
+      
+        <li class="language language-es">
+          <a rel="alternate" lang="es" hreflang="es"
+            href="/lang/es"
+            >español (es)</a>
+        </li>
+      
+        <li class="language language-fa">
+          <a rel="alternate" lang="fa" hreflang="fa"
+            href="/lang/fa"
+            >فارسی (fa)</a>
+        </li>
+      
+        <li class="language language-fr">
+          <a rel="alternate" lang="fr" hreflang="fr"
+            href="/lang/fr"
+            >français (fr)</a>
+        </li>
+      
+        <li class="language language-he">
+          <a rel="alternate" lang="he" hreflang="he"
+            href="/lang/he"
+            >עברית (he)</a>
+        </li>
+      
+        <li class="language language-hin">
+          <a rel="alternate" lang="hin" hreflang="hin"
+            href="/lang/hin"
+            >हिन्दी (hin)</a>
+        </li>
+      
+        <li class="language language-hr">
+          <a rel="alternate" lang="hr" hreflang="hr"
+            href="/lang/hr"
+            >hrvatski (hr)</a>
+        </li>
+      
+        <li class="language language-hu">
+          <a rel="alternate" lang="hu" hreflang="hu"
+            href="/lang/hu"
+            >magyar (hu)</a>
+        </li>
+      
+        <li class="language language-hy">
+          <a rel="alternate" lang="hy" hreflang="hy"
+            href="/lang/hy"
+            >Հայերեն (hy)</a>
+        </li>
+      
+        <li class="language language-id">
+          <a rel="alternate" lang="id" hreflang="id"
+            href="/lang/id"
+            >indonesia (id)</a>
+        </li>
+      
+        <li class="language language-it">
+          <a rel="alternate" lang="it" hreflang="it"
+            href="/lang/it"
+            >italiano (it)</a>
+        </li>
+      
+        <li class="language language-ja">
+          <a rel="alternate" lang="ja" hreflang="ja"
+            href="/lang/ja"
+            >日本語 (ja)</a>
+        </li>
+      
+        <li class="language language-ka">
+          <a rel="alternate" lang="ka" hreflang="ka"
+            href="/lang/ka"
+            >ქართული (ka)</a>
+        </li>
+      
+        <li class="language language-kab">
+          <a rel="alternate" lang="kab" hreflang="kab"
+            href="/lang/kab"
+            >taqbaylit (kab)</a>
+        </li>
+      
+        <li class="language language-ko">
+          <a rel="alternate" lang="ko" hreflang="ko"
+            href="/lang/ko"
+            >한국어 (ko)</a>
+        </li>
+      
+        <li class="language language-pl">
+          <a rel="alternate" lang="pl" hreflang="pl"
+            href="/lang/pl"
+            >polski (pl)</a>
+        </li>
+      
+        <li class="language language-pt-BR">
+          <a rel="alternate" lang="pt-BR" hreflang="pt-BR"
+            href="/lang/pt-BR"
+            >português brasileiro (pt-BR)</a>
+        </li>
+      
+        <li class="language language-ru">
+          <a rel="alternate" lang="ru" hreflang="ru"
+            href="/lang/ru"
+            >pyccкий (ru)</a>
+        </li>
+      
+        <li class="language language-sk">
+          <a rel="alternate" lang="sk" hreflang="sk"
+            href="/lang/sk"
+            >slovensky (sk)</a>
+        </li>
+      
+        <li class="language language-sl">
+          <a rel="alternate" lang="sl" hreflang="sl"
+            href="/lang/sl"
+            >slovenščina (sl)</a>
+        </li>
+      
+        <li class="language language-sv">
+          <a rel="alternate" lang="sv" hreflang="sv"
+            href="/lang/sv"
+            >svenska (sv)</a>
+        </li>
+      
+        <li class="language language-tr">
+          <a rel="alternate" lang="tr" hreflang="tr"
+            href="/lang/tr"
+            >Türkçe (tr)</a>
+        </li>
+      
+        <li class="language language-uk">
+          <a rel="alternate" lang="uk" hreflang="uk"
+            href="/lang/uk"
+            >українська (uk)</a>
+        </li>
+      
+        <li class="language language-zh-CN">
+          <a rel="alternate" lang="zh-CN" hreflang="zh-CN"
+            href="/lang/zh-CN"
+            >简体中文 (zh-CN)</a>
+        </li>
+      
+        <li class="language language-zh-TW">
+          <a rel="alternate" lang="zh-TW" hreflang="zh-TW"
+            href="/lang/zh-TW"
+            >繁體中文 (zh-TW)</a>
+        </li>
+      
+    </ol>
+    <ol class="nav">
+      
+      
+        
+        
+        
+          <li class="version version-2.0.0">
+            <a href="/spec/v2.0.0.html">2.0.0</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="version version-2.0.0-rc.2">
+            <a href="/spec/v2.0.0-rc.2.html">2.0.0-rc.2</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="version version-2.0.0-rc.1">
+            <a href="/spec/v2.0.0-rc.1.html">2.0.0-rc.1</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="version version-1.0.0">
+            <a href="/spec/v1.0.0.html">1.0.0</a>
+          </li>
+        
+      
+        
+        
+        
+          <li class="version version-1.0.0-beta">
+            <a href="/spec/v1.0.0-beta.html">1.0.0-beta</a>
+          </li>
+        
+      
+    </ol>
+    <div id="spec">
+     <h1 id="versi-semantik-200">Versi Semantik 2.0.0</h1>
+
+<h2 id="ringkasan">Ringkasan</h2>
+
+<p>Versi semantik ditulis dalam bentuk MAJOR.MINOR.PATCH, dengan:</p>
+
+<ol>
+  <li>Tambah angka versi MAJOR jika membuat perubahan API yang tidak lagi cocok dengan versi sebelumnya.</li>
+  <li>Tambah angka versi MINOR jika menambah fitur tanpa membuat versi lama tidak bisa digunakan.</li>
+  <li>Tambah angka versi PATCH jika ada perbaikan bug tanpa membuat versi lama tidak bisa digunakan.</li>
+</ol>
+
+<p>Tambahan label dan versi sebelum rilis atau info tambahan tersedia sebagai ekstensi dari format
+MAJOR.MINOR.PATCH.</p>
+
+<h2 id="pendahuluan">Pendahuluan</h2>
+
+<p>Dalam pengembangan perangkat lunak, sering terjadi permasalahan “dependency hell”.
+Semakin besar sistem yang dibuat dan semakin banyak modul yang digunakan sistem kita,
+semakin sering permasalahan ini akan terjadi.</p>
+
+<p>Dalam sistem yang saling terkait, merilis versi baru dari sebuah modul bisa menjadi mimpi buruk.
+Jika spesifikasi dependensi sistem terlalu ketat, bisa jadi sistem kita tidak bisa dikembangkan
+lagi. Jika spesifikasi dependensi sistem terlalu bebas, semakin sulit untuk mengatur versi mana
+yang bisa digunakan dengan versi yang lain. Situasi inilah yang disebut dengan “dependency hell”.</p>
+
+<p>Sebagai solusi permasalahan ini, saya ajukan sebuah standar yang bisa digunakan sebagai
+dasar untuk menentukan bagaimana cara menentukan versi, dan bagaimana cara menaikkan angka-angka
+di versi tersebut. Aturan ini hanyalah dasar, dan tidak untuk membatasi standar versi yang 
+sebelumnya sudah digunakan.</p>
+
+<p>Supaya standar ini bisa bermanfaat, pertama kalian harus menentukan API publik, titik
+dimana kalian mulai menggunakan standar ini. Setelah ditentukan, setiap rilis
+versi bisa kalian komunikasikan dengan dokumentasi, dan secara langsung melalui angka versi
+tersebut. Pembetulan bug menaikkan angka patch, penambahan fitur menaikkan angka minor, perubahan
+yang membuat versi lama tidak bisa digunakan menaikkan angka major.</p>
+
+<p>Standar ini bernama “Pemberian Versi Semantik”, dengan standar ini, setiap orang yang melihat
+angka versi bisa tahu secara umum apa yang berubah dengan sistem tersebut.</p>
+
+<h2 id="spesifikasi-versi-semantik-versem">Spesifikasi Versi Semantik (VerSem)</h2>
+
+<p>Kata HARUS, TIDAK BOLEH, DIBUTUHKAN, SEHARUSNYA, JANGAN SAMPAI, SEBAIKNYA, SEBAIKNYA TIDAK,
+DIREKOMENDASIKAN, BISA, dan OPSIONAL di dokumen ini sesuai dengan <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<ol>
+  <li>
+    <p>Perangkat lunak dengan Versi Semantik harus menentukan API public. Bisa
+dijelaskan dengan kode, atau ditulis di dokumentasi, ditulis dengan jelas dan akurat.</p>
+  </li>
+  <li>
+    <p>Versi HARUS ditulis dalam bentuk X.Y.Z, dengan X, Y, Z bilangan bulat positif, dan TIDAK
+BOLEH didahului angka 0 (contoh 01.02.03). X adalah versi MAJOR, Y adalah minor, dan Z adalah patch.</p>
+  </li>
+  <li>
+    <p>Setelah versi dirilis, isi dari versi tersebut TIDAK BOLEH dirubah. Setiap perubahan HARUS
+merilis versi baru.</p>
+  </li>
+  <li>
+    <p>Versi major 0 (0.y.z) adalah untuk pengembangan awal, saat banyak perubahan bisa terjadi. API publik
+dianggap tidak stabil di versi ini.</p>
+  </li>
+  <li>
+    <p>Versi 1.0.0 adalah titik awal API publik, setiap versi baru ditulis berdasarkan versi ini.</p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Versi patch Z (x.y.Z</td>
+          <td>x &gt; 0) HARUS dinaikkan jika ada perbaikan bug tanpa menambah fitur.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Versi minor Y (x.Y.z | x &gt; 0) HARUS dinaikkan jika ada fitur baru, atau ada fitur lama
+yang yang sudah usang. Versi ini BISA dinaikkan jika ada tambahan fungsionalitas substansial atau terjadi peningkatan. Versi ini BISA diubah bersama dengan versi patch. Versi patch HARUS dikembalikan ke angka 0 jika versi minor dinaikkan.</p>
+  </li>
+  <li>
+    <p>Versi major X (X.y.z | X &gt; 0) HARUS dinaikkan jika ada perubahan yang membuat versi baru
+tidak kompatibel dengan versi lama, seperti menghapus fitur lama, menambah fitur baru yang tidak bisa
+digunakan di versi lama, BISA diubah bersama dengan versi patch dan minor, jika versi major dinaikkan, maka versi minor dan patch harus dikembalikan ke angka 0.</p>
+  </li>
+  <li>
+    <p>Versi sebelum rilis BISA ditulis dengan menambahkan garis dan
+bisa dipisah dengan titik tepat setelah versi patch. Versi sebelum rilis HARUS ditulis dengan
+huruf ASCII alfanumerik dan garis [0-9A-Za-z], TIDAK BOLEH kosong, dan angka TIDAK BOLEH
+didahului dengan angka 0. Versi sebelum rilis dianggap tidak stabil dan dikesampingkan jika ada versi yang stabil. Contoh: 1.0.0-alpha, 2.3.1-beta.</p>
+  </li>
+  <li>
+    <p><em>Build Metadata</em> BISA ditulis setelah versi sebelum rilis didahului dengan tanda tambah
+dan bisa dipisah dengan titik. <em>Build Metadata</em> HARUS ditulis dengan huruf ASCII alfanumerik dan garis
+[0-9A-Za-z]. <em>Build Metadata</em> TIDAK BOLEH kosong. <em>Build Metadata</em> merupakan ID dari hasil build, dan dikesampingkan jika ada versi sebelum rilis atau versi yang lebih stabil. Contoh: 1.0.0-alpha+1, 1.5.2+3312</p>
+  </li>
+  <li>Penentuan versi mana yang didahulukan diurutkan berdasarkan versi stabil, lalu versi sebelum rilis, dan versi dengan <em>Build Metadata</em>. Jika ada versi stabil yang sama, maka diambil versi dengan angka paling tinggi. Contoh 2.0.0 lebih didahulukan dari 1.0.0. Jika ada versi sebelum rilis, maka diambil versi yang stabil terlebih dahulu. Contoh, 2.0.0 lebih didahulukan dari 2.0.0-alpha.</li>
+</ol>
+
+<h2 id="kenapa-menggunakan-pemberian-versi-semantik">Kenapa Menggunakan Pemberian Versi Semantik</h2>
+
+<p>Versi Semantik bukanlah ide baru yang revolusioner, faktanya, kalian mungkin sudah
+menggunakan standar ini, hanya saja tidak terlalu ketat. Masalahnya, jika tidak diatur dengan ketat
+akan terjadi permasalah seperti “dependency hell” di atas. Tanpa ada standar, maka pengatur kebutuhan sistem seperti NPM, Composer, tidak akan bisa bekerja dengan baik. Dengan adanya standar ini, bisa lebih mudah dalam mengatur versi dan pengatur kebutuhan sistem bisa bekerja lebih baik.</p>
+
+<p>Contoh sederhana berikut ini menunjukkan manfaat Pemberian Versi Semantik untuk menghilangkan “dependency hell”. 
+Misalkan ada sebuah modul bernama “MobilPemadamKebakaran”. Modul “MobilPemadamKebakaran” membutuhkan modul 
+lain bernama “Tangga”. Pada waktu “MobilPemadamKebakaran” dibuat, “Tangga” memiliki versi 3.1.0.
+Dengan menggunakan Pemberian Versi Semantik, “MobilPemadamKebakaran” bisa dengan yakin menggunakan
+modul “Tangga” selama modul tersebut mempunyai versi antara 3.1.0 sampai dengan sebelum versi 4.0.0.</p>
+
+<p>Pemberian Versi Semantik adalah aturan baku yang bisa diikuti atau tidak diikuti, dan tugas dari standar pemberian versi semantik hanyalah untuk membantu supaya pemberian versi bisa lebih jelas.</p>
+
+<p>Jika menurut kalian aturan baku ini bagus, kalian bisa mulai menggunakan pemberian versi semantik. Tautkan situs ini dalam README kalian supaya orang lain bisa tahu mengenai aturan ini dan mulai menggunakannya juga.</p>
+
+<h2 id="pertanyaan-yang-sering-diajukan">Pertanyaan Yang Sering Diajukan</h2>
+
+<h3 id="bagaimana-memulai-versi-pengembangan-0yz">Bagaimana memulai versi pengembangan 0.y.z?</h3>
+
+<p>Paling mudah adalah memulai dengan versi 0.1.0.</p>
+
+<h3 id="kapan-harus-dirilis-versi-100">Kapan harus dirilis versi 1.0.0?</h3>
+
+<p>Ketika sistem yang dikembangkan sudah stabil dan digunakan dalam lingkungan produksi, kalian bisa
+mulai menentukannya dengan versi 1.0.0.</p>
+
+<h3 id="bukankah-standar-ini-mencegah-perkembangan-yang-cepat">Bukankah standar ini mencegah perkembangan yang cepat?</h3>
+
+<p>Versi 0.1.0 adalah tempat dimana banyak perubahan terjadi, jadi standar ini tidak mencegah perkembangan yang cepat.</p>
+
+<h3 id="jika-perubahan-yang-tidak-membuat-versi-lama-tidak-bisa-dipakai-sangat-banyak-bukankah-berarti-nanti-dengan-cepat-versi-kita-membengkan-menjadi-seperti-versi-10000">Jika perubahan yang tidak membuat versi lama tidak bisa dipakai sangat banyak, bukankah berarti nanti dengan cepat versi kita membengkan menjadi seperti versi 100.0.0?</h3>
+
+<p>Ini lebih ke permasalahan pengembangan, jika pengembangan dilakukan dengan seksama, maka seharusnya tidak terjadi perubahan yang terlalu signifikan dalam waktu yang cepat.</p>
+
+<h3 id="terlalu-merepotkan">Terlalu merepotkan!</h3>
+
+<p>Sudah tanggung jawab pengembang untuk memastikan sistemnya bisa digunakan dengan baik dan mudah. Pemberian Versi Semantik hanya memandu orang untuk konsisten dan bisa bekerja sama dengan baik.</p>
+
+<h3 id="bagaimana-jika-secara-tidak-sengaja-membuat-perubahan-yang-menjadikan-versi-lama-tidak-bisa-dipakai">Bagaimana jika secara tidak sengaja membuat perubahan yang menjadikan versi lama tidak bisa dipakai?</h3>
+
+<p>Langsung ganti perubahan tersebut dan kembalikan supaya masih bisa digunakan versi lama dan naikkan versi minor.</p>
+
+<h3 id="bagaimana-jika-saya-merubah-kebutuhan-sistem-tanpa-merubah-api-publik">Bagaimana jika saya merubah kebutuhan sistem tanpa merubah API publik?</h3>
+
+<p>Seharusnya tidak berpengaruh, karena kebutuhan sistem anda sudah memiliki versi sendiri, dan API publik anda seharusnya berfungsi sebaga jembatan atau hanya sekedar memanfaatkan fitur dari sistem-sistem luar tersebut.</p>
+
+<h3 id="bagaimana-jika-perubahan-yang-terjadi-ternyata-sangat-besar-dan-sudah-dirilis-di-versi-patch">Bagaimana jika perubahan yang terjadi ternyata sangat besar dan sudah dirilis di versi patch?</h3>
+
+<p>Gunakan kebijakan terbaik kalian, jika ada pengguna sistem kalian yang sangat besar, maka lebih
+baik segera rilis versi major, meskipun perubahannya tidak begitu mencolok. Dengan ini pengguna
+sistem bisa lebih tahu tentang perubahan yang ada di sistem. Ingat, Versi Semantik hanyalah standar sebagai media untuk memberitahu bahwa sistem yang ada sudah berubah dengan batasan-batasan tertentu.</p>
+
+<h3 id="bagaimana-jika-ada-fitur-yang-usang">Bagaimana jika ada fitur yang usang?</h3>
+
+<p>Fitur yang usang bisa kalian jelaskan di dokumentasi sehingga pengguna sistem bisa sedikit demi sedikit beradaptasi dengan fitur yang usang setiap ada perubahan versi minor, jika kalian sudah siap menghapus fitur yang usang, hapus fitur tersebut di perubahan versi major.</p>
+
+<h3 id="apakah-versi-semantik-punya-batasan-jumlah-karakter-dalam-versi">Apakah Versi Semantik punya batasan jumlah karakter dalam versi?</h3>
+
+<p>Tidak ada, tapi sebaiknya gunakan saja secukupnya. Versi sepanjang 255 terlalu banyak dan membuat pengguna kesulitan untuk membacanya.</p>
+
+<h2 id="tentang">Tentang</h2>
+
+<p>Spesifikasi Versi Semantik dibuat oleh <a href="http://tom.preston-werner.com">Tom Preston-Werner</a>, pembuat Gravatars dan
+cofounder dari GitHub.</p>
+
+<p>Translasi Bahasa Indonesia ditulis oleh <a href="https://adityamyria.wordpress.com">Aditya Purwa</a> dan dikoreksi oleh
+<a href="https://github.com/cwibowo">Christian B. Wibowo</a>.</p>
+
+<p>Untuk saran dan kritik, <a href="https://github.com/mojombo/semver/issues">buka issue di GitHub</a>.</p>
+
+<h2 id="lisensi">Lisensi</h2>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons - CC BY 3.0</a></p>
+
+    </div>
+    <script src="/js/anchorli.js"></script>
+  </body>
+</html>

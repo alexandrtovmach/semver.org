@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Wersjonowanie semantyczne 2.0.0 | Semantic Versioning</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Wersjonowanie semantyczne 2.0.0" />
+<meta name="author" content="Tom Preston-Werner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semantic Versioning spec and website" />
+<meta property="og:description" content="Semantic Versioning spec and website" />
+<link rel="canonical" href="http://0.0.0.0:4000/lang/pl/spec/v2.0.0.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/lang/pl/spec/v2.0.0.html" />
+<meta property="og:site_name" content="Semantic Versioning" />
+<script type="application/ld+json">
+{"description":"Semantic Versioning spec and website","@type":"WebPage","headline":"Wersjonowanie semantyczne 2.0.0","url":"http://0.0.0.0:4000/lang/pl/spec/v2.0.0.html","author":{"@type":"Person","name":"Tom Preston-Werner"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <ol class="nav lang" dir="ltr">
+      
+      
+        <li class="language language-ar">
+          <a rel="alternate" lang="ar" hreflang="ar"
+            href="/lang/ar"
+            >العربية (ar)</a>
+        </li>
+      
+        <li class="language language-ca">
+          <a rel="alternate" lang="ca" hreflang="ca"
+            href="/lang/ca"
+            >català (ca)</a>
+        </li>
+      
+        <li class="language language-cs">
+          <a rel="alternate" lang="cs" hreflang="cs"
+            href="/lang/cs"
+            >česky (cs)</a>
+        </li>
+      
+        <li class="language language-de">
+          <a rel="alternate" lang="de" hreflang="de"
+            href="/lang/de"
+            >deutsch (de)</a>
+        </li>
+      
+        <li class="language language-en">
+          <a rel="alternate" lang="en" hreflang="en"
+            href="/lang/en"
+            >english (en)</a>
+        </li>
+      
+        <li class="language language-es">
+          <a rel="alternate" lang="es" hreflang="es"
+            href="/lang/es"
+            >español (es)</a>
+        </li>
+      
+        <li class="language language-fa">
+          <a rel="alternate" lang="fa" hreflang="fa"
+            href="/lang/fa"
+            >فارسی (fa)</a>
+        </li>
+      
+        <li class="language language-fr">
+          <a rel="alternate" lang="fr" hreflang="fr"
+            href="/lang/fr"
+            >français (fr)</a>
+        </li>
+      
+        <li class="language language-he">
+          <a rel="alternate" lang="he" hreflang="he"
+            href="/lang/he"
+            >עברית (he)</a>
+        </li>
+      
+        <li class="language language-hin">
+          <a rel="alternate" lang="hin" hreflang="hin"
+            href="/lang/hin"
+            >हिन्दी (hin)</a>
+        </li>
+      
+        <li class="language language-hr">
+          <a rel="alternate" lang="hr" hreflang="hr"
+            href="/lang/hr"
+            >hrvatski (hr)</a>
+        </li>
+      
+        <li class="language language-hu">
+          <a rel="alternate" lang="hu" hreflang="hu"
+            href="/lang/hu"
+            >magyar (hu)</a>
+        </li>
+      
+        <li class="language language-hy">
+          <a rel="alternate" lang="hy" hreflang="hy"
+            href="/lang/hy"
+            >Հայերեն (hy)</a>
+        </li>
+      
+        <li class="language language-id">
+          <a rel="alternate" lang="id" hreflang="id"
+            href="/lang/id"
+            >indonesia (id)</a>
+        </li>
+      
+        <li class="language language-it">
+          <a rel="alternate" lang="it" hreflang="it"
+            href="/lang/it"
+            >italiano (it)</a>
+        </li>
+      
+        <li class="language language-ja">
+          <a rel="alternate" lang="ja" hreflang="ja"
+            href="/lang/ja"
+            >日本語 (ja)</a>
+        </li>
+      
+        <li class="language language-ka">
+          <a rel="alternate" lang="ka" hreflang="ka"
+            href="/lang/ka"
+            >ქართული (ka)</a>
+        </li>
+      
+        <li class="language language-kab">
+          <a rel="alternate" lang="kab" hreflang="kab"
+            href="/lang/kab"
+            >taqbaylit (kab)</a>
+        </li>
+      
+        <li class="language language-ko">
+          <a rel="alternate" lang="ko" hreflang="ko"
+            href="/lang/ko"
+            >한국어 (ko)</a>
+        </li>
+      
+        <li class="language language-pl">
+          <a rel="alternate" lang="pl" hreflang="pl"
+            href="/lang/pl"
+            >polski (pl)</a>
+        </li>
+      
+        <li class="language language-pt-BR">
+          <a rel="alternate" lang="pt-BR" hreflang="pt-BR"
+            href="/lang/pt-BR"
+            >português brasileiro (pt-BR)</a>
+        </li>
+      
+        <li class="language language-ru">
+          <a rel="alternate" lang="ru" hreflang="ru"
+            href="/lang/ru"
+            >pyccкий (ru)</a>
+        </li>
+      
+        <li class="language language-sk">
+          <a rel="alternate" lang="sk" hreflang="sk"
+            href="/lang/sk"
+            >slovensky (sk)</a>
+        </li>
+      
+        <li class="language language-sl">
+          <a rel="alternate" lang="sl" hreflang="sl"
+            href="/lang/sl"
+            >slovenščina (sl)</a>
+        </li>
+      
+        <li class="language language-sv">
+          <a rel="alternate" lang="sv" hreflang="sv"
+            href="/lang/sv"
+            >svenska (sv)</a>
+        </li>
+      
+        <li class="language language-tr">
+          <a rel="alternate" lang="tr" hreflang="tr"
+            href="/lang/tr"
+            >Türkçe (tr)</a>
+        </li>
+      
+        <li class="language language-uk">
+          <a rel="alternate" lang="uk" hreflang="uk"
+            href="/lang/uk"
+            >українська (uk)</a>
+        </li>
+      
+        <li class="language language-zh-CN">
+          <a rel="alternate" lang="zh-CN" hreflang="zh-CN"
+            href="/lang/zh-CN"
+            >简体中文 (zh-CN)</a>
+        </li>
+      
+        <li class="language language-zh-TW">
+          <a rel="alternate" lang="zh-TW" hreflang="zh-TW"
+            href="/lang/zh-TW"
+            >繁體中文 (zh-TW)</a>
+        </li>
+      
+    </ol>
+    <ol class="nav">
+      
+      
+        
+        
+        
+          <li class="version version-2.0.0">
+            <a href="/lang/pl/spec/v2.0.0.html">2.0.0</a>
+          </li>
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+    </ol>
+    <div id="spec">
+     <h1 id="wersjonowanie-semantyczne-200">Wersjonowanie semantyczne 2.0.0</h1>
+
+<h2 id="streszczenie">Streszczenie</h2>
+
+<p>Dla numeru wersji MAJOR.MINOR.PATCH, zwiększaj:</p>
+
+<ol>
+  <li>wersję MAJOR, gdy dokonujesz zmian niekompatybilnych z API,</li>
+  <li>wersję MINOR, gdy dodajesz nową funkcjonalność, która jest kompatybilna
+z poprzednimi wersjami,</li>
+  <li>wersję PATCH, gdy naprawiasz błąd nie zrywając kompatybilności z poprzednimi
+wersjami.</li>
+</ol>
+
+<p>Dodatkowe oznaczenia dla wydania przedpremierowego lub meta-danych buildu są
+dostępne jako rozszerzenia formatu MAJOR.MINOR.PATCH.</p>
+
+<h2 id="wprowadzenie">Wprowadzenie</h2>
+
+<p>W świecie zarządzania oprogramowaniem istnieje przerażające miejsce nazywane
+„piekłem zależności”. Im bardziej twój system rośnie i im więcej pakietów
+integrujesz w swoim oprogramowaniu, tym większe jest prawdopodobieństwo, że
+pewnego dnia znajdziesz się w tej otchłani rozpaczy.</p>
+
+<p>W systemach z wieloma zależnościami, wydawanie nowych wersji pakietu może szybko
+stać się koszmarem. Jeśli zależności są określone zbyt wąsko, jesteś zagrożony
+blokadą wersji (niemożnością zaktualizowania pakietu bez konieczności wydania
+nowych wersji każdego zależnego pakietu). Jeśli zależności są określone zbyt
+luźno, nieuchronnie natniesz się na „rozwiązłość wersji” (założenie
+kompatybilności z większą liczbą kolejnych wersji niż jest to rozsądne). Piekłem
+zależności jest sytuacja, w której blokada wersji i/lub rozwiązłość wersji
+uniemożliwiają wygodny i bezpieczny rozwój twojego projektu.</p>
+
+<p>Jako rozwiązanie tego problemu proponuję prosty zbiór zasad i wymogów, które
+regulują jak przypisywać i zwiększać numery wersji. Zasady te są oparte, ale
+niekoniecznie ograniczone, na istniejących wcześniej, szeroko rozpowszechnionych
+praktykach, stosowanych zarówno w zamkniętym, jak i otwartym oprogramowaniu. Aby
+ten system działał, musisz najpierw określić publiczne API. Może to być
+dokumentacja lub może wymusić je sam kod źródłowy. Niezależnie od sposobu
+określenia, ważne jest, by to API było przejrzyste i precyzyjne. Kiedy już masz
+swoje publiczne API, komunikujesz zmiany w nim określonymi zwiększeniami w swoim
+numerze wersji. Rozważmy format wersji X.Y.Z (major.minor.patch). Naprawy błędów
+nieingerujących w API zwiększają wersję patch, kompatybilne wstecz
+dodatki/zmiany w API zwiększają wersję minor, a niekompatybilne wstecz zmiany
+w API zwiększają wersję major.</p>
+
+<p>Nazywam ten system „wersjonowaniem semantycznym”. W tym układzie numery wersji
+i sposób, w jaki się zmieniają, przenoszą informacje o kodzie pod spodem i co
+było zmieniane z wersji na wersję.</p>
+
+<h2 id="specyfikacja-wersjonowania-semantycznego-semver">Specyfikacja wersjonowania semantycznego (SemVer)</h2>
+
+<p>Terminy „MUSI” („MUST”), „NIE MOŻE” („MUST NOT”), „WYMAGANY” („REQUIRED”), „MA
+BYĆ” („SHALL”), „NIE BĘDZIE” („SHALL NOT”), „POWINIEN” („SHOULD”), „NIE
+POWINIEN” („SHOULD NOT”), „ZALECANY” („RECOMMENDED”), „MOŻE” („MAY”)
+i „OPCJONALNY” („OPTIONAL”) w tym dokumencie należy interpretować jak opisano
+w <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<ol>
+  <li>
+    <p>Oprogramowanie używające wersjonowania semantycznego MUSI określać swoje
+publiczne API. API to może być zadeklarowane w samym kodzie lub może istnieć
+w samej dokumentacji. Jakkolwiek jest zdefiniowane, powinno być precyzyjne
+i wyczerpujące.</p>
+  </li>
+  <li>
+    <p>Standardowy numer wersji MUSI przyjąć formę X.Y.Z, gdzie X, Y i Z są
+nieujemnymi liczbami całkowitymi i NIE MOGĄ zawierać wiodących zer. X jest
+wersją major, Y wersją minor, a Z wersją patch. Każdy składnik MUSI rosnąć
+numerycznie. Przykładowo: 1.9.0 → 1.10.0 → 1.11.0.</p>
+  </li>
+  <li>
+    <p>Po wydaniu wersjonowanego pakietu, zawartość tej wersji NIE MOŻE być
+modyfikowana. Jakiekolwiek zmiany MUSZĄ być wydane jako nowa wersja.</p>
+  </li>
+  <li>
+    <p>Wersja major zero (0.y.z) jest przeznaczona dla początkowej fazy rozwoju.
+Wszystko może ulec zmianie w dowolnym momencie. Publiczne API nie powinno być
+traktowane jako stabilne.</p>
+  </li>
+  <li>
+    <p>Wersja 1.0.0 określa publiczne API. Sposób, w jaki numer wersji jest
+zwiększany po tym wydaniu, zależy od tego publicznego API i jak się ono zmienia.</p>
+  </li>
+  <li>
+    <p>Wersja patch Z (x.y.Z | x &gt; 0) MUSI zostać zwiększona, jeśli wprowadza się
+tylko kompatybilne wstecz naprawy błędów. Naprawa błędu definiowana jest jako
+zmiana wewnętrzna, która usuwa nieprawidłowe działanie.</p>
+  </li>
+  <li>
+    <p>Wersja minor Y (x.Y.z | x &gt; 0) MUSI zostać zwiększona, jeśli nowa,
+kompatybilna wstecz funkcjonalność zostaje wprowadzona do publicznego API. MUSI
+zostać zwiększona, jeśli jakakolwiek funkcjonalność publicznego API zostaje
+zdezaprobowana. MOŻE zostać zwiększona, jeśli wprowadzone zostają nowe znaczące
+funkcjonalności lub ulepszenia w obrębie prywatnego kodu. MOŻE ona zawierać
+zmiany na poziomie patch. Numer wersji patch MUSI być ustawiony na 0, gdy wersja
+minor jest zwiększana.</p>
+  </li>
+  <li>
+    <p>Wersja major X (X.y.z | X &gt; 0) MUSI zostać zwiększona, jeżeli do publicznego
+API są wprowadzane jakiekolwiek wstecznie niekompatybilne zmiany. MOŻE zawierać
+zmiany na poziomie minor oraz patch. Numery wersji minor oraz patch MUSZĄ być
+ustawione na 0, gdy wersja major jest zwiększana.</p>
+  </li>
+  <li>
+    <p>Wydanie przedpremierowe MOŻE być oznaczone przez dołączenie dywizu oraz
+zbioru identyfikatorów rozdzielonych kropkami, zaraz za numerem wersji
+patch. Identyfikatory MUSZĄ składać się wyłącznie ze znaków alfanumerycznych
+ASCII oraz myślników [0-9A-Za-z-]. Identyfikatory NIE MOGĄ być puste. Numeryczne
+identyfikatory NIE MOGĄ zawierać wiodących zer. Wydania przedpremierowe
+poprzedzają powiązane z nimi wersje standardowe. Wydanie przedpremierowe
+wskazuje na niestabilność wersji i możliwość niespełniania wymogów
+kompatybilności, które cechują powiązaną z nią standardową wersję. Przykłady:
+1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.</p>
+  </li>
+  <li>
+    <p>Meta-dane buildu MOGĄ być oznaczone przez dołączenie znaku plus oraz zbioru
+identyfikatorów rozdzielonych kropkami, zaraz za numerem wersji patch lub
+wydania przedpremierowego. Identyfikatory MUSZĄ składać się wyłącznie ze znaków
+alfanumerycznych ASCII oraz myślników [0-9A-Za-z-]. Identyfikatory NIE MOGĄ być
+puste. Meta-dane buildu POWINNY być ignorowane przy ustalaniu kolejności wersji.
+Zatem, dwie wersje różniące się tylko meta-danymi buildu mają ten sam stopień
+pierwszeństwa. Przykłady: 1.0.0-alpha+001, 1.0.0+20130313144700,
+1.0.0-beta+exp.sha.5114f85.</p>
+  </li>
+  <li>
+    <p>Pierwszeństwo odnosi się do sposobu porównywania wersji między sobą podczas
+ich porządkowania. Pierwszeństwo MUSI być ustalane w rozdzieleniu wersji na
+identyfikatory major, minor, patch oraz identyfikator przedpremierowy w podanej
+kolejności (meta-dane buildu nie decydują o pierwszeństwie). Pierwszeństwo jest
+ustalane przez pierwszą różnicę wykrytą podczas porównania każdego
+z identyfikatorów od lewej do prawej: wersje major, minor, patch są zawsze
+porównywane numerycznie. Przykład: 1.0.0 &lt; 2.0.0 &lt; 2.1.0 &lt; 2.1.1. Gdy numery
+wersji major, minor i patch są równe, wydanie przedpremierowe poprzedza wersję
+standardową. Przykładowo: 1.0.0-alpha &lt; 1.0.0. Pierwszeństwo dwóch wydań
+przedpremierowych z takimi samymi numerami wersji major, minor i patch MUSI być
+ustalane przez porównywanie każdego z identyfikatorów rozdzielonych kropkami
+w kierunku od lewej do prawej, póki nie zostanie wykryta różnica w taki sposób:
+identyfikatory złożone z samych cyfr porównywane są numerycznie,
+a identyfikatory z literami lub dywizami porównywane są leksykalnie w kolejności
+ASCII. Identyfikatory numeryczne zawsze poprzedzają identyfikatory
+nienumeryczne. Większy zbiór przedpremierowych pól poprzedza mniejszy zbiór,
+o ile wszystkie poprzedzające identyfikatory są sobie równe. Przykład:
+1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt;
+1.0.0-beta.11 &lt; 1.0.0-rc.1 &lt; 1.0.0.</p>
+  </li>
+</ol>
+
+<h2 id="dlaczego-warto-stosować-wersjonowanie-semantyczne">Dlaczego warto stosować wersjonowanie semantyczne?</h2>
+
+<p>To nie jest nowy ani rewolucyjny pomysł. W zasadzie prawdopodobnie już
+posługujesz się prawie tą samą metodą. Problem w tym, że „prawie” robi różnicę.
+Bez zgodności z jakimś rodzajem formalnej specyfikacji, numery wersji są
+całkowicie nieprzydatne przy zarządzaniu zależnościami. Poprzez nadanie nazwy
+i jasnych definicji powyższym pomysłom, łatwiejszym staje się przekazywanie
+twoich intencji użytkownikom twojego oprogramowania. Gdy te intencje są jasne,
+wreszcie da się robić elastyczne (ale nie zbyt elastyczne) specyfikacje
+zależności.</p>
+
+<p>Prosty przykład może udowodnić, w jaki sposób wersjonowanie semantyczne może
+zamienić piekło zależności w relikt przeszłości. Rozważmy bibliotekę nazwaną
+„Wóz strażacki”. Wymaga ona wersjonowanego semantycznie pakietu o nazwie
+„Drabina”. W czasie, gdy Wóz strażacki jest tworzony, Drabina jest w wersji
+3.1.0. Jako że Wóz strażacki korzysta z funkcjonalności, które zostały
+wprowadzone po raz pierwszy w wersji 3.1.0, możesz bezpiecznie założyć, że
+wymagana wersja Drabiny jest większa lub równa 3.1.0, ale mniejsza niż 4.0.0.
+Teraz, gdy staną się dostępne wersje Drabiny 3.1.1 lub 3.2.0, możesz puścić je
+w swoim systemie zarządzania pakietami ze świadomością, że będą one kompatybilne
+z istniejącym zależnym oprogramowaniem.</p>
+
+<p>Jako odpowiedzialny programista musisz oczywiście zweryfikować, że każde
+aktualizacje pakietów działają jak powinny. Prawdziwy świat potrafi dać w kość;
+nic nie możemy z tym zrobić poza zachowaniem czujności. To, co ty możesz zrobić,
+to pozwolić by wersjonowanie semantyczne dostarczyło ci rozsądną metodę
+wydawania i aktualizowania pakietów bez konieczności wydawania nowych
+wersji pakietów zależnych, oszczędzającą ci czas i wysiłek.</p>
+
+<p>Jeśli to wszystko brzmi zachęcająco, wszystko, co musisz zrobić, aby korzystać
+z wersjonowania semantycznego, to zadeklarować się, że będziesz to robić,
+a następnie przestrzegać zasad. Podlinkuj tę stronę w swoim README, aby inni
+znali te zasady i mogli z nich korzystać.</p>
+
+<h2 id="często-zadawane-pytania">Często zadawane pytania</h2>
+
+<h3 id="jak-powinienem-zajmować-się-wersjami-w-0yz-początkowej-fazie-rozwoju">Jak powinienem zajmować się wersjami w 0.y.z początkowej fazie rozwoju?</h3>
+
+<p>Najprościej jest zacząć swoje wydanie początkowej fazy rozwoju od 0.1.0,
+a następnie zwiększać wersję minor dla każdego kolejnego wydania.</p>
+
+<h3 id="skąd-mam-wiedzieć-kiedy-wydać-100">Skąd mam wiedzieć, kiedy wydać 1.0.0?</h3>
+
+<p>Jeśli twoje oprogramowanie jest w użyciu w produkcji, powinno prawdopodobnie już
+być 1.0.0. Jeśli masz stabilne API, z którego zaczęli korzystać użytkownicy,
+powinieneś mieć 1.0.0. Jeśli dużo się martwisz o kompatybilność wstecz,
+powinieneś prawdopodobnie już mieć 1.0.0.</p>
+
+<h3 id="czy-nie-opóźnia-to-szybkiego-rozwoju-i-szybkiej-iteracji">Czy nie opóźnia to szybkiego rozwoju i szybkiej iteracji?</h3>
+
+<p>W wersji major zero chodzi o szybki rozwój. Jeśli zmieniasz API codziennie,
+powinieneś albo być wciąż w wersji 0.y.z, albo w oddzielnej gałęzi rozwoju,
+pracując nad nową wersją major.</p>
+
+<h3 id="jeśli-nawet-najmniejsze-niekompatybilne-wstecz-zmiany-w-publicznym-api-wymagają-podbicia-wersji-major-czy-bardzo-szybko-nie-skończę-na-wersji-4200">Jeśli nawet najmniejsze niekompatybilne wstecz zmiany w publicznym API wymagają podbicia wersji major, czy bardzo szybko nie skończę na wersji 42.0.0?</h3>
+
+<p>To jest kwestia odpowiedzialnego programowania i dalekowzroczności.
+Niekompatybilne zmiany nie powinny być wprowadzane z lekkością do
+oprogramowania, które jest zależnością w wielu miejscach. Koszt, który trzeba
+ponieść, by zaktualizować pakiet, może być znamienny. Konieczność podbijania
+wersji major przy wprowadzaniu niekompatybilnych zmian powoduje, że będziesz
+myślał przez pryzmat siły oddziaływania swoich zmian i szacował stosunek
+poniesionych kosztów do zysków.</p>
+
+<h3 id="stworzenie-dokumentacji-całego-publicznego-api-to-zbyt-dużo-pracy">Stworzenie dokumentacji całego publicznego API to zbyt dużo pracy!</h3>
+
+<p>Jako profesjonalny programista jesteś odpowiedzialny za prawidłową dokumentację
+oprogramowania, które jest przeznaczone do użytku przez innych. Zarządzanie
+złożonością oprogramowania jest niezwykle ważną częścią utrzymania sprawności
+projektu, a jest to trudne do zrobienia, jeśli nikt nie wie jak używać twojego
+oprogramowania albo z których metod jest bezpiecznie korzystać. Na dłuższą metę
+wersjonowanie semantyczne oraz obstawanie przy dobrze zdefiniowanym publicznym
+API pozwoli wszystkim i wszystkiemu działać płynnie.</p>
+
+<h3 id="co-zrobić-jeśli-przez-przypadek-wypuściłem-niekompatybilną-wstecz-zmianę-jako-wersję-minor">Co zrobić, jeśli przez przypadek wypuściłem niekompatybilną wstecz zmianę jako wersję minor?</h3>
+
+<p>Jak tylko odkryjesz, że zaburzyłeś specyfikację semantycznego wersjonowania,
+napraw ten błąd i wydaj nową wersję minor, która niweluje błąd i przywraca
+wsteczną kompatybilność. Nawet w takich okolicznościach niedopuszczalne jest
+modyfikowanie wydanej wersji. Jeśli możesz, opisz błędną wersję i poinformuj
+użytkowników o problemie, aby byli świadomi, że ta wersja jest błędna.</p>
+
+<h3 id="co-powinienem-zrobić-jeśli-aktualizuję-własne-zależności-bez-zmiany-publicznego-api">Co powinienem zrobić jeśli aktualizuję własne zależności bez zmiany publicznego API?</h3>
+
+<p>Taka aktualizacja jest uznawana za kompatybilną, gdyż nie narusza publicznego
+API. Oprogramowanie, które opiera się na tych samych zależnościach co twój
+pakiet, powinno mieć własną specyfikację zależności, a jego autor zauważy
+konflikt. Ustalenie, czy zmiana jest na poziomie patch lub czy jest modyfikacją
+na poziomie minor zależy od tego, czy zaktualizowałeś zależności w celu naprawy
+błędu, czy w celu wprowadzenia nowej funkcjonalności. Zazwyczaj spodziewałbym
+się dodatkowego kodu w tym drugim przypadku, co oczywiście oznacza zwiększenie
+wersji minor.</p>
+
+<h3 id="co-jeśli-nieumyślnie-zmieniłem-publiczne-api-w-taki-sposób-że-nie-jest-już-zgodne-ze-zmianą-numeru-wersji-tj-kod-nieprawidłowo-wprowadza-zmianę-major-w-wydaniu-patch">Co jeśli nieumyślnie zmieniłem publiczne API w taki sposób, że nie jest już zgodne ze zmianą numeru wersji (tj. kod nieprawidłowo wprowadza zmianę major w wydaniu patch)?</h3>
+
+<p>Postępuj zgodnie z rozsądkiem. Jeśli oprogramowanie używane jest przez wielu
+użytkowników, dla których zmiana publicznego API do poprzednio zamierzonego
+stanu może być dużym uderzeniem, lepiej jest wypuścić nową wersję major, nawet
+jeśli problem mógłby być rozwiązany wydaniem wersji patch. Należy pamiętać, że
+w semantycznym wersjonowaniu chodzi przede wszystkim o przekazanie znaczenia
+zmiany poprzez zmianę numeru wersji. Jeśli zmiany są ważne dla użytkowników,
+poinformuj ich o tym poprzez numer wersji.</p>
+
+<h3 id="jak-powinienem-radzić-sobie-z-dezaprobowaniem-funkcjonalności">Jak powinienem radzić sobie z dezaprobowaniem funkcjonalności?</h3>
+
+<p>Dezaprobowanie istniejącej funkcjonalności jest normalną częścią programowania
+i często jest konieczne, by móc rozwijać oprogramowanie. Gdy wycofujesz część
+swojego publicznego API, powinieneś zrobić dwie rzeczy: (1) zaktualizować
+dokumentację, by użytkownicy wiedzieli o tej zmianie, (2) wypuścić nowe wydanie
+minor z informacją o zdezaprobowaniu. Zanim całkowicie usuniesz funkcjonalność
+w nowym wydaniu major, powinno być co najmniej jedno wydanie minor zawierające
+zdezaprobowanie, aby użytkownicy mogli płynnie przejść na nowe API.</p>
+
+<h3 id="czy-semver-ma-limit-długości-na-oznaczenie-wersji">Czy semver ma limit długości na oznaczenie wersji?</h3>
+
+<p>Nie, ale miej zdrowy rozsądek. Na przykład numer wersji długi na 255 znaków to
+prawdopodobnie przesada. Ponadto konkretne systemy mogą narzucać swoje własne
+ograniczenia na rozmiar tego ciągu znaków.</p>
+
+<h2 id="o-specyfikacji">O specyfikacji</h2>
+
+<p>Autorem specyfikacji wersjonowania semantycznego jest
+<a href="http://tom.preston-werner.com">Tom Preston-Werner</a>, wynalazca Gravatara
+i współzałożyciel GitHuba.</p>
+
+<p>Jeśli chcesz podzielić się opinią, prosimy
+o <a href="https://github.com/mojombo/semver/issues">otworzenie zgłoszenia na GitHubie</a>.</p>
+
+<h2 id="licencja">Licencja</h2>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons – CC BY 3.0</a>.</p>
+
+    </div>
+    <script src="/js/anchorli.js"></script>
+  </body>
+</html>

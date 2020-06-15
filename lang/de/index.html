@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Semantic Versioning 2.0.0 | Semantic Versioning</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Semantic Versioning 2.0.0" />
+<meta name="author" content="Tom Preston-Werner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semantic Versioning spec and website" />
+<meta property="og:description" content="Semantic Versioning spec and website" />
+<link rel="canonical" href="http://0.0.0.0:4000/lang/de/" />
+<meta property="og:url" content="http://0.0.0.0:4000/lang/de/" />
+<meta property="og:site_name" content="Semantic Versioning" />
+<script type="application/ld+json">
+{"description":"Semantic Versioning spec and website","@type":"WebPage","headline":"Semantic Versioning 2.0.0","url":"http://0.0.0.0:4000/lang/de/","author":{"@type":"Person","name":"Tom Preston-Werner"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <ol class="nav lang" dir="ltr">
+      
+      
+        <li class="language language-ar">
+          <a rel="alternate" lang="ar" hreflang="ar"
+            href="/lang/ar"
+            >العربية (ar)</a>
+        </li>
+      
+        <li class="language language-ca">
+          <a rel="alternate" lang="ca" hreflang="ca"
+            href="/lang/ca"
+            >català (ca)</a>
+        </li>
+      
+        <li class="language language-cs">
+          <a rel="alternate" lang="cs" hreflang="cs"
+            href="/lang/cs"
+            >česky (cs)</a>
+        </li>
+      
+        <li class="language language-de">
+          <a rel="alternate" lang="de" hreflang="de"
+            href="/lang/de"
+            >deutsch (de)</a>
+        </li>
+      
+        <li class="language language-en">
+          <a rel="alternate" lang="en" hreflang="en"
+            href="/lang/en"
+            >english (en)</a>
+        </li>
+      
+        <li class="language language-es">
+          <a rel="alternate" lang="es" hreflang="es"
+            href="/lang/es"
+            >español (es)</a>
+        </li>
+      
+        <li class="language language-fa">
+          <a rel="alternate" lang="fa" hreflang="fa"
+            href="/lang/fa"
+            >فارسی (fa)</a>
+        </li>
+      
+        <li class="language language-fr">
+          <a rel="alternate" lang="fr" hreflang="fr"
+            href="/lang/fr"
+            >français (fr)</a>
+        </li>
+      
+        <li class="language language-he">
+          <a rel="alternate" lang="he" hreflang="he"
+            href="/lang/he"
+            >עברית (he)</a>
+        </li>
+      
+        <li class="language language-hin">
+          <a rel="alternate" lang="hin" hreflang="hin"
+            href="/lang/hin"
+            >हिन्दी (hin)</a>
+        </li>
+      
+        <li class="language language-hr">
+          <a rel="alternate" lang="hr" hreflang="hr"
+            href="/lang/hr"
+            >hrvatski (hr)</a>
+        </li>
+      
+        <li class="language language-hu">
+          <a rel="alternate" lang="hu" hreflang="hu"
+            href="/lang/hu"
+            >magyar (hu)</a>
+        </li>
+      
+        <li class="language language-hy">
+          <a rel="alternate" lang="hy" hreflang="hy"
+            href="/lang/hy"
+            >Հայերեն (hy)</a>
+        </li>
+      
+        <li class="language language-id">
+          <a rel="alternate" lang="id" hreflang="id"
+            href="/lang/id"
+            >indonesia (id)</a>
+        </li>
+      
+        <li class="language language-it">
+          <a rel="alternate" lang="it" hreflang="it"
+            href="/lang/it"
+            >italiano (it)</a>
+        </li>
+      
+        <li class="language language-ja">
+          <a rel="alternate" lang="ja" hreflang="ja"
+            href="/lang/ja"
+            >日本語 (ja)</a>
+        </li>
+      
+        <li class="language language-ka">
+          <a rel="alternate" lang="ka" hreflang="ka"
+            href="/lang/ka"
+            >ქართული (ka)</a>
+        </li>
+      
+        <li class="language language-kab">
+          <a rel="alternate" lang="kab" hreflang="kab"
+            href="/lang/kab"
+            >taqbaylit (kab)</a>
+        </li>
+      
+        <li class="language language-ko">
+          <a rel="alternate" lang="ko" hreflang="ko"
+            href="/lang/ko"
+            >한국어 (ko)</a>
+        </li>
+      
+        <li class="language language-pl">
+          <a rel="alternate" lang="pl" hreflang="pl"
+            href="/lang/pl"
+            >polski (pl)</a>
+        </li>
+      
+        <li class="language language-pt-BR">
+          <a rel="alternate" lang="pt-BR" hreflang="pt-BR"
+            href="/lang/pt-BR"
+            >português brasileiro (pt-BR)</a>
+        </li>
+      
+        <li class="language language-ru">
+          <a rel="alternate" lang="ru" hreflang="ru"
+            href="/lang/ru"
+            >pyccкий (ru)</a>
+        </li>
+      
+        <li class="language language-sk">
+          <a rel="alternate" lang="sk" hreflang="sk"
+            href="/lang/sk"
+            >slovensky (sk)</a>
+        </li>
+      
+        <li class="language language-sl">
+          <a rel="alternate" lang="sl" hreflang="sl"
+            href="/lang/sl"
+            >slovenščina (sl)</a>
+        </li>
+      
+        <li class="language language-sv">
+          <a rel="alternate" lang="sv" hreflang="sv"
+            href="/lang/sv"
+            >svenska (sv)</a>
+        </li>
+      
+        <li class="language language-tr">
+          <a rel="alternate" lang="tr" hreflang="tr"
+            href="/lang/tr"
+            >Türkçe (tr)</a>
+        </li>
+      
+        <li class="language language-uk">
+          <a rel="alternate" lang="uk" hreflang="uk"
+            href="/lang/uk"
+            >українська (uk)</a>
+        </li>
+      
+        <li class="language language-zh-CN">
+          <a rel="alternate" lang="zh-CN" hreflang="zh-CN"
+            href="/lang/zh-CN"
+            >简体中文 (zh-CN)</a>
+        </li>
+      
+        <li class="language language-zh-TW">
+          <a rel="alternate" lang="zh-TW" hreflang="zh-TW"
+            href="/lang/zh-TW"
+            >繁體中文 (zh-TW)</a>
+        </li>
+      
+    </ol>
+    <ol class="nav">
+      
+      
+        
+        
+        
+          <li class="version version-2.0.0">
+            <a href="/lang/de/spec/v2.0.0.html">2.0.0</a>
+          </li>
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+    </ol>
+    <div id="spec">
+     <h1 id="semantic-versioning-200">Semantic Versioning 2.0.0</h1>
+
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+
+<p>Auf Grundlage einer Versionsnummer von MAJOR.MINOR.PATCH werden die einzelnen Elemente folgendermaßen erhöht:</p>
+
+<ol>
+  <li>MAJOR wird erhöht, wenn API-inkompatible Änderungen veröffentlicht werden,</li>
+  <li>MINOR wird erhöht, wenn neue Funktionalitäten, welche kompatibel zur bisherigen API sind, veröffentlicht werden, und</li>
+  <li>PATCH wird erhöht, wenn die Änderungen ausschließlich API-kompatible Bugfixes umfassen.</li>
+</ol>
+
+<p>Außerdem sind Bezeichner für Vorveröffentlichungen und Build-Metadaten als Erweiterungen zum MAJOR.MINOR.PATCH Format verfügbar.</p>
+
+<h2 id="einführung">Einführung</h2>
+
+<p>In der Welt der Softwareentwicklung existiert ein grauenhafter Ort namens “Dependency Hell”. Um so größer ein Projekt wird und je mehr Pakete in die Software integriert werden, desto wahrscheinlicher ist es, dass dieser fürchterliche Ort eines Tages betreten wird.</p>
+
+<p>In Projekten mit vielen Abhängigkeiten kann das Aktualisieren abhängiger Pakete schnell zum Albtraum werden. Sind die Abhängigkeitsspezifikationen des Pakets zu strikt, besteht die Gefahr des “Version Lock” (die Unfähigkeit ein Paket zu aktualisieren, ohne, dass alle abhängigen Pakete dieses Pakets ebenfalls aktualisiert werden müssen). Wenn die Abhängigkeiten des Pakets allerdings zu lasch definiert sind, wird sehr wahrscheinlich ein Problem, das sich “Version Promiscuity” nennt (das Paket gibt vor, mit mehr zukünftigen Versionen seiner abhängigen Pakete kompatibel zu sein, als angemessen ist), eintreten. <em>Dependency Hell</em> bezeichnet die Situation, in der entweder <em>Version Lock</em> oder <em>Version Promiscuity</em>, oder beides den Entwicklungsprozess des Projekts beeinträchtigt.</p>
+
+<p>Als Lösung für dieses Problem schlage ich ein einfaches Regelwerk vor, welches definiert wie Versionsnummern gewählt und erhöht werden. Diese Regeln basieren auf bereits existierenden und weit verbreiteten Verfahren, welche sowohl bei der Entwicklung von Closed- als auch von Open-Source Software verwendet werden, aber beschränken sich nicht zwingend auf diese. Um dieses System nutzen zu können, muss zuerst eine öffentliche API definiert werden. Diese kann entweder in Form einer Dokumentation existieren oder durch den Code selbst erzwungen werden. Egal auf welche Art und Weise die API umgesetzt wird, es ist wichtig, dass sie übersichtlich und präzise ist. Sobald die öffentliche API erstellt wurde, werden Änderungen an dieser durch bestimmten Veränderungen an der Versionsnummer vermittelt. Nimm ein Versionsnummernformat von X.Y.Z (Major.Minor.Patch) an. Bei Einführung von Bugfixes, welche die öffentliche API nicht beeinflussen, wird die Patch Version erhöht, API-kompatible Ergänzungen oder Änderungen erhöhen die Minor Versionsnummer, und Änderungen, welche nicht kompatibel zur aktuellen öffentlichen API sind, erhöhen die Major Version.</p>
+
+<p>Ich nenne dieses System “Semantic Versioning”. Versionsnummern, die nach diesem Schema gewählt und erhöht werden, geben direkten Aufschluss über den entsprechenden Code und was sich von einer zur anderen Version verändert hat.</p>
+
+<h2 id="semantic-versioning-spezifikation-semver">Semantic Versioning Spezifikation (SemVer)</h2>
+
+<p>Die Terme “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, und “OPTIONAL” in diesem Dokument sind, wie in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a> beschrieben, zu interpretieren.</p>
+
+<ol>
+  <li>
+    <p>Software, welche <em>Semantic Versioning</em> nutzt, muss (MUST) eine öffentliche API definieren. Die API kann entweder im Code selbst deklariert werden oder in einer Dokumentation enthalten sein. Wie auch immer sie umgesetzt wird, es ist wichtig, dass sie präzise und ausführlich ist.</p>
+  </li>
+  <li>
+    <p>Eine gewöhnliche Versionsnummer muss (MUST) dem Format X.Y.Z entsprechen, wobei X, Y und Z Ganzzahlen größer oder gleich Null sind und eine Zahl größer als Null keine führenden Nullen enthalten darf. X ist die Major Version, Y ist die Minor Version und Z ist die Patch Version. Jedes Element muss (MUST) auf numerische Art und Weise erhöht werden. Zum Beispiel: 1.9.0 -&gt; 1.10.0 -&gt; 1.11.0.</p>
+  </li>
+  <li>
+    <p>Sobald eine Version eines Projektes veröffentlicht wurde, darf (MUST NOT) der Inhalt dieser Version nicht mehr verändert werden. Eine Änderung am Inhalt muss (MUST) als eine neue Version veröffentlicht werden.</p>
+  </li>
+  <li>
+    <p>Versionsnummern mit einer Major Version von 0 (0.y.z) sind für die initiale Development Phase gedacht. Änderungen können in jeder denkbaren Form und zu jeder Zeit auftreten. Die öffentliche API sollte nicht als <em>stable</em> betrachtet werden.</p>
+  </li>
+  <li>
+    <p>Die Version 1.0.0 definiert die öffentliche API. Ab dieser Veröffentlichung hängt die Art und Weise, wie die Versionsnummer erhöht und verändert wird, von der öffentlichen API und den Änderungen, die an ihr vollzogen werden, ab.</p>
+  </li>
+  <li>
+    <p>Die Patch Version Z (x.y.Z <code class="language-plaintext highlighter-rouge">|</code> x &gt; 0) muss (MUST) erhöht werden, wenn ausschließlich API-kompatible Bugfixes eingeführt werden. Ein Bugfix ist als eine interne Änderung, welche ein fehlerhaftes Verhalten korrigiert, definiert.</p>
+  </li>
+  <li>
+    <p>Die Minor Version Y (x.Y.z <code class="language-plaintext highlighter-rouge">|</code> x &gt; 0) muss (MUST) erhöht werden, wenn neue Funktionalitäten, welche kompatibel zur bisherigen API sind, veröffentlicht werden. Sie muss (MUST) außerdem erhöht werden, wenn eine Funktion der öffentlichen API als <em>deprecated</em> markiert wird. Wenn umfangreiche Änderungen an internem Code eingeführt werden, darf (MAY) die Minor Version ebenfalls erhöht werden. Wenn diese Versionsnummer erhöht wird, muss (MUST) die Patch Version auf Null zurückgesetzt werden.</p>
+  </li>
+  <li>
+    <p>Die Major Version X (X.y.z <code class="language-plaintext highlighter-rouge">|</code> X &gt; 0) muss (MUST) immer dann erhöht werden, wenn API-inkompatible Änderungen in die öffentlichen API eingeführt werden. Die Änderungen dürfen (MAY) auch Änderungen umfassen, die ansonsten die Minor Version oder die Patch Version erhöht hätten. Wenn diese Versionsnummer erhöht wird, muss (MUST) sowohl die Minor Version als auch die Patch Version auf Null zurückgesetzt werden.</p>
+  </li>
+  <li>
+    <p>Eine Vorveröffentlichung kann (MAY) gekennzeichnet werden, indem ein Bindestrich, gefolgt von dem Vorveröffentlichungs-Bezeichner, dessen Elemente durch Punkte voneinander getrennt werden, an die Patch Version angehängt wird. Die Elemente des Bezeichners dürfen (MUST) nur aus alphanumerischen ASCII Zeichen und dem Bindestrich ([0-9A-Za-z-]) bestehen. Sie dürfen (MUST NOT) außerdem nicht leer sein. Wenn ein Element ausschließlich aus Ziffern besteht, darf (MUST NOT) es keine führenden Nullen enthalten. Eine Vorveröffentlichungs-Version hat einen niedrigeren Rang als die entsprechende reguläre Version. Ein Vorveröffentlichungs-Bezeichner kennzeichnet, dass die Version als <em>unstable</em> zu betrachten ist und dass sie unter Umständen nicht den Kompatibilitätsanforderungen, die für die entsprechende regulären Version bestimmt wurden, entspricht. Beispiele: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.</p>
+  </li>
+  <li>
+    <p>Build-Metadaten können (MAY) ausgezeichnet werden, indem ein Plus Symbol, gefolgt von den Metadaten, deren Elemente durch Punkte voneinander getrennt werden, an die Patch Version oder den Vorveröffentlichungs-Bezeichner angehängt wird. Die Elemente der Metadaten dürfen (MUST) nur aus alphanumerischen ASCII Zeichen und dem Bindestrich ([0-9A-Za-z-]) bestehen. Sie dürfen (MUST NOT) außerdem nicht leer sein. Die Build-Metadaten haben keinerlei Einfluss auf den Rang einer Version, sodass zwei Versionen, deren Versionsnummern sich nur in den Build-Metadaten unterscheiden, denselben Rang einnehmen. Beispiele: 1.0.0-alpha+001, 1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85.</p>
+  </li>
+  <li>
+    <p>Der Rang einer Version bestimmt, welche Versionsnummer einer anderen übergeordnet ist, wenn diese bei einer Sortierung miteinander verglichen werden. Der Rang wird (MUST)  aus der Major, Minor und Patch Version sowie dem Vorveröffentlichungs-Bezeichner berechnet (Die Build-Metadaten haben keinerlei Einfluss auf den Rang einer Version). Er wird bestimmt, indem der erste Unterschied zwischen dem oben aufgeführten Elementen ermittelt wird. Dabei wird von links nach rechts, in der oben genannten Reihenfolge vorgegangen. Die Major, Minor und Patch Versionen werden numerisch miteinander verglichen. Beispiel: 1.0.0 &lt; 2.0.0 &lt; 2.1.0 &lt; 2.1.1. Beim Vergleich von zwei Versionsnummern, deren Major, Minor und Patch Versionen gleich sind, nimmt eine Vorveröffentlichung einen niedrigeren Rang als die reguläre Version ein. Beispiel: 1.0.0-alpha &lt; 1.0.0. Sind beide dieser Versionen Vorveröffentlichungen, wird (MUST) der Rang ermittelt, indem jedes Element eines Vorveröffentlichungs-Bezeichners (durch Punkte voneinander getrennt) mit dem der anderen Version verglichen wird bis ein Unterschied festgestellt wird. Auch hierbei wird von links nach rechts vorgegangen. Elemente, welche ausschließlich aus Ziffern bestehen, werden numerisch miteinander verglichen. Der Vergleich aller anderen Elemente erfolgt auf Basis der ASCII-Stellenwerte ihrer Zeichen. Numerische Elemente haben immer einen niedrigeren Rang als solche, die auch andere Zeichen enthalten. Falls alle Elemente identisch sind, nimmt der Bezeichner mit den meisten Elementen den höheren Rang ein. Beispiel: 1.0.0-alpha &lt; 1.0.0-alpha.1 &lt; 1.0.0-alpha.beta &lt; 1.0.0-beta &lt; 1.0.0-beta.2 &lt; 1.0.0-beta.11 &lt; 1.0.0-rc.1 &lt; 1.0.0.</p>
+  </li>
+</ol>
+
+<h2 id="weshalb-sollte-man-semantic-versioning-nutzen">Weshalb sollte man Semantic Versioning nutzen?</h2>
+
+<p>Dieses System ist keine neue oder revolutionäre Idee. Tatsächlich hast du wahrscheinlich bereits ein ähnliches System genutzt. Das Problem ist, dass “ähnlich” nicht ausreichend ist. Ohne Einhaltung irgendeiner Art von offizieller Spezifikation, sind Versionsnummern nicht besonders hilfreich beim Verwalten von Abhängigkeiten. Durch das Benennen und Aufstellen von Regeln für die, am Anfang dieses Dokuments angesprochenen, Ideen, wird es einfach, Nutzer der Software über die Art und den Umfang der Änderungen zu informieren. Sobald diese Informationen ersichtlich sind, können endlich flexible (aber nicht zu flexible) Abhängigkeitsangaben gemacht werden werden.</p>
+
+<p>Wie <em>Semantic Versioning</em> die <em>Dependency Hell</em> ein Problem der Vergangenheit werden lassen kann, wird hier an einem einfachen Beispiel veranschaulicht. Geh von einer Library namens “Firetruck” aus. Sie ist abhängig von einem <em>Semantically versioned</em> Paket namens “Ladder”. Zum Zeitpunkt der Erstellung von Firetruck befindet sich Ladder in Version 3.1.0. Da Firetruck eine Funktion von Ladder verwendet, welche erst ab Version 3.1.0 verfügbar ist, kann die Abhängigkeit als <em>größer oder gleich 3.1.0, aber kleiner als 4.0.0</em> definiert werden. Wenn also jetzt Version 3.1.1 oder 3.2.0 von Ladder veröffentlicht wird, kann diese einfach im Package Management System freigeschaltet werden, mit der Gewissheit, dass sie mit der abhängigen Software (Firetruck) kompatibel ist.</p>
+
+<p>Als ein verantwortungsbewusster Programmierer will man natürlich prüfen, ob die aktualisierten Pakete wie beschrieben funktionieren. Die richtige Welt ist ein chaotischer Ort; Es gibt nichts, was wir tun können um dies sicherstellen, aber sei wachsam! Was wir tun können ist, <em>Semantic Versioning</em> zu nutzen um auf eine angemessen einfache Art und Weise Pakete zu aktualisieren ohne auch deren abhängige Pakete aktualisieren zu müssen und damit Zeit und Aufwand zu sparen.</p>
+
+<p>Wenn das alles wünschenswert klingt und von den Vorteilen profitiert werden soll, muss nichts Weiteres getan werden, als anzugeben, dass ein Projekt <em>Semantic Versioning</em> verwendet und anschließend den oben genannte Regeln Folge zu leisten. Verweise in der README auf diese Webseite, sodass auch andere über die Regeln Bescheid wissen und von ihnen profitieren können.</p>
+
+<h2 id="faq">FAQ</h2>
+
+<h3 id="wie-soll-ich-bei-der-versionierung-in-der-initialen-development-phase-0yz-verfahren">Wie soll ich bei der Versionierung in der initialen Development Phase (0.y.z) verfahren?</h3>
+
+<p>Das Einfachste ist, die Versionierung bei 0.1.0 zu beginnen und dann bei jedem folgender Veröffentlichung die Minor Version zu erhöhen.</p>
+
+<h3 id="woher-weiß-ich-wann-es-zeit-ist-version-100-zu-veröffentlichen">Woher weiß ich, wann es Zeit ist Version 1.0.0 zu veröffentlichen?</h3>
+
+<p>Wenn die Software schon in der Produktion verwendet wird, sollte sie bereits in Version 1.0.0 vorliegen. Falls eine <em>stable</em> API existiert, auf die sich Nutzer bereits verlassen, sollte es ebenfalls die Version 1.0.0 sein. Auch wenn Kompatibilität zu vorherigen Versionen bereits eine wichtige Rolle spielt, ist Version 1.0.0 angebracht.</p>
+
+<h3 id="hält-das-nicht-von-rapid-development-und-fast-iteration-ab">Hält das nicht von <em>Rapid Development</em> und <em>Fast Iteration</em> ab?</h3>
+
+<p>In Versionen mit einer Major Version von Null dreht sich alles um <em>Rapid Development</em>. Wenn sich die API tagtäglich verändert, sollte sich das Projekt entweder noch in Version 0.y.z befinden oder es sollte auf einem separate Development Branch an der nächsten Major Veröffentlichung gearbeitet werden.</p>
+
+<h3 id="wenn-schon-die-kleinsten-api-inkompatiblen-änderungen-an-der-öffentlichen-api-eine-anhebung-der-major-version-erfordern-wird-eine-version-wie-4200-nicht-sehr-schnell-erreicht-werden">Wenn schon die kleinsten API-inkompatiblen Änderungen an der öffentlichen API eine Anhebung der Major Version erfordern, wird eine Version wie 42.0.0 nicht sehr schnell erreicht werden?</h3>
+
+<p>Das ist eine Frage von verantwortungsbewusstem Development und Weitsicht. API-inkompatible Änderungen sollten nicht leichtfertig eingeführt werden, da das Aktualisieren des Pakets in Software von Dritten, welche eine große Menge an API-spezifischen Code enthalten, mit drastischem Aufwand verbunden sein kann. Die Tatsache, dass die Major Version beim Einführen von API-inkompatiblen Änderungen angehoben werden muss, drängt einen dazu, die Auswirkungen der Änderungen noch einmal zu überdenken und das Kosten-Nutzen-Verhältnis abzuwägen.</p>
+
+<h3 id="die-gesamte-öffentliche-api-zu-dokumentieren-ist-viel-zu-viel-arbeit">Die gesamte öffentliche API zu dokumentieren ist viel zu viel Arbeit!</h3>
+
+<p>Es ist die Aufgabe eines professionellen Developers, Software, welche für die Verwendung durch andere bestimmt ist, ordentlich zu dokumentieren. Das Verwalten der Komplexität einer Software ist ein enorm wichtiger Teil, wenn es darum geht ein Projekt erfolgreich zu betreiben, was schwer ist, wenn niemand weiß wie eine Software zu verwenden ist oder welche Funktionen sie anbietet. Langfristig gesehen, werden <em>Semantic Versioning</em> und eine gut definierte öffentliche API ein System sicherstellen, in dem alles reibungslos ineinandergreift.</p>
+
+<h3 id="was-soll-ich-tun-wenn-ich-versehentlich-eine-api-inkompatible-änderung-in-einer-minor-version-veröffentlicht-habe">Was soll ich tun wenn ich versehentlich eine API-inkompatible Änderung in einer Minor Version veröffentlicht habe?</h3>
+
+<p>Sobald du feststellst, dass du die <em>Semantic Versioning</em> Spezifikation nicht befolgt hast, korrigiere den Fehler, indem du eine neue Minor Version veröffentlichst, welche das Problem behebt und die Kompatibilität zur API wiederherstellt. Selbst unter diesen Umständen ist es nicht erlaubt, eine bereits veröffentlichte Version zu verändern. Falls es angemessen ist, dokumentiere welche Version problematisch ist, sodass die Nutzer über diese Version Bescheid wissen.</p>
+
+<h3 id="was-soll-ich-tun-wenn-ich-die-abhängigkeitsangaben-meines-projekts-ändere-aber-keine-änderungen-an-der-öffentlichen-api-einführe">Was soll ich tun wenn ich die Abhängigkeitsangaben meines Projekts ändere, aber keine Änderungen an der öffentlichen API einführe?</h3>
+
+<p>Dies würde als kompatibel angesehen werden, da es die öffentliche API nicht beeinflusst. Eine Software, welche ausdrücklich dieselben Abhängigkeiten wie das Paket hat, sollte  seine eigenen Abhängigkeitsangaben haben und der Autor der Software wird mögliche Konflikte selbstständig feststellen. Ob nun die Minor Version oder aber die Patch Version erhöht wird, hängt davon ab ob die Abhängigkeiten aktualisiert wurden um einen Bug zu beseitigen oder um eine neue Funktionalität zu ergänzen. Normalerweise geschieht dies aus letzterem Grund, bei dem natürlich die Minor Version angehoben werden müsste.</p>
+
+<h3 id="was-soll-ich-tun-wenn-ich-die-öffentliche-api-versehentlich-derartig-verändert-habe-dass-sie-nicht-mit-der-änderung-an-der-versionsnummer-harmoniert-das-heißt-der-code-zerstört-fälschlicherweise-in-einer-patch-version-die-api-konformität">Was soll ich tun wenn ich die öffentliche API versehentlich derartig verändert habe, dass sie nicht mit der Änderung an der Versionsnummer harmoniert (Das heißt, der Code zerstört fälschlicherweise in einer Patch Version die API-Konformität)?</h3>
+
+<p>Entscheide nach deinem eigene Ermessen. Wenn du eine große Nutzergemeinde hast, die von der aktuellen API stark abhängt, dann wäre es wahrscheinlich das Beste, die Veröffentlichung als eine Major Version zu publizieren, auch wenn die Änderungen eigentlich nur einen Patch darstellen sollten. Denk dran, bei <em>Semantic Versioning</em> dreht sich alles darum, die Art und den Umfang der Änderungen am Code durch die Änderungen an der Versionsnummer zu vermitteln.</p>
+
+<h3 id="wie-soll-ich-mit-deprecated-funktionen-verfahren">Wie soll ich mit <em>deprecated</em> Funktionen verfahren?</h3>
+
+<p>Funktionalitäten als <em>deprecated</em> zu markieren ist ein gewöhnlicher Teil von Software Development und ist häufig notwendig um mit der Entwicklung voranzuschreiten. Wenn etwas in der öffentlichen API als <em>deprecated</em> markiert wird, sollte erstens, die Dokumentation bezüglich der Änderungen angepasst werden, und zweitens, eine neue Minor Version mit der <em>deprecated</em> Funktionalität veröffentlicht werden. Bevor die Funktionalität in einer Major Veröffentlichung vollständig entfernt wird, sollte mindestens eine Minor Version, die die <em>Deprecation</em> enthält, veröffentlicht werden, sodass Nutzer einfach zur neuen API migrieren können.</p>
+
+<h3 id="ist-die-länge-eines-semver-version-strings-limitiert">Ist die Länge eines SemVer Version Strings limitiert?</h3>
+
+<p>Nein, aber sei vernünftig. Zum Beispiel, wäre ein 255 Zeichen langer Version String wahrscheinlich ein wenig übertrieben. Außerdem könnten bestimmte Systeme ihre eigenen Limits definieren.</p>
+
+<h2 id="über">Über</h2>
+
+<p>Die <em>Semantic Versioning</em> Spezifikation wurde von <a href="http://tom.preston-werner.com">Tom Preston-Werner</a>, Erfinder von Gravatars und Mitbegründer von GitHub, erstellt.</p>
+
+<p>Für Feedback, <a href="https://github.com/mojombo/semver/issues">eröffne bitte ein Issue auf GitHub</a>.</p>
+
+<h2 id="lizenz">Lizenz</h2>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons - CC BY 3.0</a></p>
+
+    </div>
+    <script src="/js/anchorli.js"></script>
+  </body>
+</html>
