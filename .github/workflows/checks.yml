@@ -70,7 +70,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               check_run_id: ${{github.run_id}},
-              status: 'completed' 
+              status: 'completed',
               conclusion: ${{steps.non-bot-check.outputs.result}} && '${{steps.lint.outcome}}' === 'success' ? 'success': 'failure'
             };
             console.log(result);
