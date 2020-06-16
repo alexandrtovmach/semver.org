@@ -70,8 +70,11 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               check_run_id: ${{github.run_id}},
+              status: 'completed' 
               conclusion: ${{steps.non-bot-check.outputs.result}} && '${{steps.lint.outcome}}' === 'success' ? 'success': 'failure'
             };
             console.log(result);
             const aga = await github.checks.update(result);
             console.log(aga);
+      - name: Dummy step
+        run: echo "This required to complete request"
