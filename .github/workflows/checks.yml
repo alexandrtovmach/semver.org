@@ -49,6 +49,13 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
+            
+            const list = await github.checks.listForRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: merge_commit_sha,
+            });
+            console.log(list);
             if (files.some(({ filename }) => /^spec\//.test(filename))) {
               await github.issues.createComment({
                 issue_number: context.issue.number,
