@@ -59,12 +59,6 @@ jobs:
               return false;
             } 
             return true;
-            
-      - name: Conclusion of check
-        if: ${{ always() }}
-        run: |
-          echo "${{steps.non-bot-check.outputs.result}}"
-          echo "${{steps.lint.outcome}}"
      
       - name: Conclusion of check custom
         if: ${{ always() }}
@@ -72,4 +66,5 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(context);
+            console.log(typeof ${{steps.non-bot-check.outputs.result}});
+            console.log('${{steps.lint.outcome}}');
