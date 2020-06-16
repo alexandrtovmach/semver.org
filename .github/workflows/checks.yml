@@ -57,15 +57,16 @@ jobs:
                 body: 'Thank you for contribution!\nSeems like you trying to change specification not in a right place :thinking:\nThis repository contains code for website [semver.org](https://semver.org) with spec translations. If you looking for direct changes to SemVer, please use [semver/semver](https://github.com/semver/semver) repository.\n\nPlease close this PR and create a new one to the right repository. If you have any questions, feel free to ping someone from @semver/maintainers'
               });
               return false;
-            }
+            } 
             return true;
-        - name: Conclusion of check
-          if: ${{ always() }}
-          uses: actions/github-script@0.9.0
-          with:
-            github-token: ${{secrets.GITHUB_TOKEN}}
-            script: |
-              console.log(steps.lint.outcome);
-              console.log(steps.non-bot-check.outputs);
-              console.log(typeof steps.non-bot-check.outputs);
+            
+      - name: Conclusion of check
+        if: ${{ always() }}
+        uses: actions/github-script@0.9.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            console.log(steps.lint.outcome);
+            console.log(steps.non-bot-check.outputs);
+            console.log(typeof steps.non-bot-check.outputs);
 
