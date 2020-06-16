@@ -62,11 +62,14 @@ jobs:
             
       - name: Conclusion of check
         if: ${{ always() }}
+        run: |
+          echo "${{steps.non-bot-check.outputs.result}}"
+          echo "${{steps.lint.outcome}}"
+     
+      - name: Conclusion of check custom
+        if: ${{ always() }}
         uses: actions/github-script@0.9.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(steps.lint.outcome);
-            console.log(steps.non-bot-check.outputs);
-            console.log(typeof steps.non-bot-check.outputs);
-
+            console.log(context);
