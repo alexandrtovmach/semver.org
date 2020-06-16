@@ -47,7 +47,7 @@ jobs:
               });
               const comments = protectedFiles.map(({ filename }) => ({
                 "path": filename,
-                "position": 0,
+                "position": 1,
                 "body": "This file shouldn't be changed in this repo"
               }))
               await github.pulls.createReview({
