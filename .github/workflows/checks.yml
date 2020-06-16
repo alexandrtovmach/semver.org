@@ -50,14 +50,14 @@ jobs:
               repo: context.repo.repo,
             });
             if (files.some(({ filename }) => /^spec\//.test(filename))) {
-              github.issues.createComment({
+              await github.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 body: 'Thank you for contribution!\nSeems like you trying to change specification not in a right place :thinking:\nThis repository contains code for website [semver.org](https://semver.org) with spec translations. If you looking for direct changes to SemVer, please use [semver/semver](https://github.com/semver/semver) repository.\n\nPlease close this PR and create a new one to the right repository. If you have any questions, feel free to ping someone from @semver/maintainers'
               });
               return false;
-            } 
+            }
             return true;
      
       - name: Conclusion of check custom
@@ -66,5 +66,12 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(typeof ${{steps.non-bot-check.outputs.result}});
-            console.log('${{steps.lint.outcome}}');
+            let result = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              check_run_id: ${{GITHUB_RUN_ID}},
+              conclusion: ${{steps.non-bot-check.outputs.result}} && '${{steps.lint.outcome}}' === 'success' ? 'success': 'failure'
+            };
+            console.log(result);
+            const aga = await github.checks.update(result);
+            console.log(aga);
