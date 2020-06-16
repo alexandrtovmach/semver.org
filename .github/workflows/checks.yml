@@ -73,15 +73,18 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            let result = {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              check_run_id: ${{github.run_id}},
-              status: 'completed',
-              conclusion: ${{steps.non-bot-check.outputs.result}} && '${{steps.lint.outcome}}' === 'success' ? 'success': 'failure'
-            };
-            console.log(result);
-            const aga = await github.checks.update(result);
-            console.log(aga);
-      - name: Dummy step
-        run: echo "This required to complete request"
+            if (${{steps.non-bot-check.outputs.result}} && '${{steps.lint.outcome}}' === 'success') {
+              github.pulls.createReview({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                event: 'APPROVE'
+              })
+            } else {
+              github.pulls.createReview({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                event: 'REQUEST_CHANGES'
+              })
+            }
